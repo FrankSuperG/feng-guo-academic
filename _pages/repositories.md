@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /repositories/
-title: repositories
+title: Repositories
 description: Featured repositories and open-source work by Feng Guo, with emphasis on CPG-SPMT.
 nav: true
 nav_order: 4
