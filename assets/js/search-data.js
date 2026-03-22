@@ -23,6 +23,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/feng-guo-academic/cv/";
           },
+        },{id: "nav-repositories",
+          title: "repositories",
+          description: "Featured repositories and open-source work by Feng Guo, with emphasis on CPG-SPMT.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/feng-guo-academic/repositories/";
+          },
         },{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
