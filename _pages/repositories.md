@@ -1,47 +1,32 @@
 ---
 layout: page
 permalink: /repositories/
-title: repositories
-description: Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.
-nav: false
+title: Repository
+description: Featured open-source project from Feng Guo: CPG-SPMT.
+nav: true
 nav_order: 4
 ---
 
-{% if site.data.repositories.github_users %}
+## Featured Open-Source Project
 
-## GitHub users
+### CPG-SPMT
 
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% for user in site.data.repositories.github_users %}
-    {% include repository/repo_user.liquid username=user %}
-  {% endfor %}
-</div>
+**CPG-SPMT** (Control-oriented Parameter-Grouped Single Particle Model with Thermal Effects) is an open-source battery modeling framework designed for efficient simulation, parameter identification, and BMS-oriented research workflows.
 
----
+- **GitHub:** [FrankSuperG/CPG-SPMT](https://github.com/FrankSuperG/CPG-SPMT)
+- **Focus:** Electrochemical modeling, thermal coupling, and control-oriented simplification
+- **Use cases:** SOC/state estimation studies, fast model calibration, and algorithm benchmarking
 
-{% if site.repo_trophies.enabled %}
-{% for user in site.data.repositories.github_users %}
-{% if site.data.repositories.github_users.size > 1 %}
+![CPG-SPMT preview](/feng-guo-academic/assets/img/publication_preview/cpc.svg)
 
-  <h4>{{ user }}</h4>
-  {% endif %}
-  <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% include repository/repo_trophies.liquid username=user %}
-  </div>
+### Why this project matters
 
----
+- Bridges physical interpretability and engineering efficiency
+- Supports battery algorithm development with practical computational cost
+- Aligns with cloud-BMS and real-time estimation/control research scenarios
 
-{% endfor %}
-{% endif %}
-{% endif %}
+### Roadmap (short)
 
-{% if site.data.repositories.github_repos %}
-
-## GitHub Repositories
-
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% for repo in site.data.repositories.github_repos %}
-    {% include repository/repo.liquid repository=repo %}
-  {% endfor %}
-</div>
-{% endif %}
+- Expand benchmark datasets and reproducible examples
+- Improve modular interfaces for estimator/controller integration
+- Add more case studies for aging/fault-aware modeling
