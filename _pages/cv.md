@@ -130,6 +130,10 @@ For full details with links and previews, see the [Publications page](/feng-guo-
 - OMES Symposium 2025, Genk, Belgium
 - ICOA 2024, Almería, Spain
 
+## <i class="fa-solid fa-code-branch"></i> Open-Source & Community
+
+Open-source contribution: [CPG-SPMT on GitHub](https://github.com/FrankSuperG/CPG-SPMT), a control-oriented parameter-grouped single-particle model with thermal effects for lithium-ion batteries, developed for efficient simulation, parameter identification, and BMS-oriented research.
+
 ## <i class="fa-solid fa-pen-nib"></i> Scholarly Service
 
 Reviewer for leading journals including: *Renewable & Sustainable Energy Reviews, Energy, Journal of Energy Storage, Battery Energy, Renewable Energy, Journal of Electroanalytical Chemistry, Electrical Engineering, World Electric Vehicle Journal, Electronics, Batteries, The Journal of Supercomputing,* and *Complex & Intelligent Systems*.
