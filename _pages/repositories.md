@@ -11,22 +11,22 @@ nav_order: 4
 
 ### CPG-SPMT
 
-**CPG-SPMT** (Control-oriented Parameter-Grouped Single Particle Model with Thermal Effects) is an open-source battery modeling framework designed for efficient simulation, parameter identification, and BMS-oriented research workflows.
+**CPG-SPMT: Control-oriented Parameter-Grouped Single Particle Model with Thermal effects** is an open-source electrochemical battery model designed for **state estimation and control-oriented BMS applications**.
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/FrankSuperG/CPG-SPMT/main/cpg_spmt_logo.png" alt="CPG-SPMT logo" style="max-width: 520px; width: 100%; border-radius: 12px;" />
+</div>
 
 - **GitHub:** [FrankSuperG/CPG-SPMT](https://github.com/FrankSuperG/CPG-SPMT)
-- **Focus:** Electrochemical modeling, thermal coupling, and control-oriented simplification
-- **Use cases:** SOC/state estimation studies, fast model calibration, and algorithm benchmarking
+- **Model idea:** uses a **parabolic approximation** to discretize SPM PDEs into efficient ODE/state-space form
+- **Efficiency:** reported to be **over 100× faster** than implicit Euler FDM (72-node reference) while keeping high accuracy
+- **Parameter design:** **14 grouped parameters** (9 core + 5 temperature-dependent activation-energy terms)
+- **Inputs/Output:** current (A) + temperature (°C) → terminal voltage (V)
+- **Validation coverage:** 24 conditions (8 temperatures × 3 drive cycles: DST/US06/FUDS)
+- **Reported performance:** average RMSE ≈ 0.0331 V, average R² ≈ 0.9683
 
-![CPG-SPMT preview](/feng-guo-academic/assets/img/publication_preview/cpc.svg)
+### Project value
 
-### Why this project matters
-
-- Bridges physical interpretability and engineering efficiency
-- Supports battery algorithm development with practical computational cost
-- Aligns with cloud-BMS and real-time estimation/control research scenarios
-
-### Roadmap (short)
-
-- Expand benchmark datasets and reproducible examples
-- Improve modular interfaces for estimator/controller integration
-- Add more case studies for aging/fault-aware modeling
+- Keeps physical interpretability while improving computational efficiency
+- Supports real-time estimation/control workflows for advanced BMS
+- Provides reproducible validation scripts and multi-temperature benchmark data

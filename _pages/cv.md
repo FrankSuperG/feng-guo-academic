@@ -132,7 +132,7 @@ For full details with links and previews, see the [Publications page](/feng-guo-
 
 ## <i class="fa-solid fa-code-branch"></i> Open-Source & Community
 
-Open-source contribution: [CPG-SPMT on GitHub](https://github.com/FrankSuperG/CPG-SPMT), a control-oriented parameter-grouped single-particle model with thermal effects for lithium-ion batteries, developed for efficient simulation, parameter identification, and BMS-oriented research.
+Open-source contribution: [CPG-SPMT on GitHub](https://github.com/FrankSuperG/CPG-SPMT), a control-oriented parameter-grouped single-particle model with thermal effects that uses parabolic approximation for efficient state-space implementation, enabling battery state estimation and control-oriented BMS research with validated multi-temperature performance.
 
 ## <i class="fa-solid fa-pen-nib"></i> Scholarly Service
 
