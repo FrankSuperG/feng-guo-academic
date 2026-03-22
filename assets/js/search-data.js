@@ -24,7 +24,7 @@ ninja.data = [{
             window.location.href = "/feng-guo-academic/cv/";
           },
         },{id: "nav-repositories",
-          title: "repositories",
+          title: "Repositories",
           description: "Featured repositories and open-source work by Feng Guo, with emphasis on CPG-SPMT.",
           section: "Navigation",
           handler: () => {
