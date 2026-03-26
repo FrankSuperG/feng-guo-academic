@@ -4,7 +4,8 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 3
-description: Curriculum vitae of Feng Guo, including appointments, representative publications, awards, projects, and scholarly service.
+description: Curriculum vitae of Feng Guo, including appointments, representative publications, awards, projects, conferences, and scholarly service.
+keywords: Feng Guo CV, conference talks, battery modeling, ECC 2026, IFAC 2026, ModVal 2026, ACC 2025, ICOA 2024
 _styles: |
   .post .post-title {
     letter-spacing: -0.01em;
@@ -122,13 +123,20 @@ For full details with links and previews, see the [Publications page](/feng-guo-
 
 ## <i class="fa-solid fa-users"></i> Conferences & Symposia (selected)
 
-- ModVal 2026, Lausanne, Switzerland
-- IFAC World Congress 2026, Busan, Republic of Korea (submitted)
-- ECC 2026, Stockholm, Sweden (submitted)
-- ACC 2025, Denver, CO, USA
-- Symposium on Physics and Machine Learning for Batteries 2025, Aachen, Germany
-- OMES Symposium 2025, Genk, Belgium
-- ICOA 2024, Almería, Spain
+- **Computer Physics Communications Seminar Series** (2026)  
+  Topic: *Bridging Electrochemical Models and Real-Time Battery Control* · [Event page](https://cassyni.com/events/VLjRX69RDuTd3ozPGfWmWu)
+- **The 22nd Symposium on Modeling and Validation of Electrochemical Energy Technologies (ModVal 2026)**, Lausanne, Switzerland (2026)  
+  Topic: *Electrochemical-Model-Based Voltage Sensor Fault Diagnosis and Fault-Tolerant SOC Estimation for LFP Batteries*
+- **The 23rd IFAC World Congress**, Busan, Republic of Korea (2026)  
+  Topic: *Stability-Guaranteed Dual Kalman Filtering for Electrochemical Battery State Estimation*
+- **European Control Conference (ECC 2026)**, Reykjavík, Iceland (2026)  
+  Topic: *Residual Bias Compensation Filter for Physics-Based SOC Estimation in Lithium Iron Phosphate Batteries*
+- **American Control Conference (ACC 2025)**, Denver, CO, USA (2025)  
+  Topic: *Identifiability Analysis of a P2D Model & Subsequent SPM-Aided Parameter Estimation*
+- **10th IEEE International Conference on Optimization and Applications (ICOA 2024)**, Almería, Spain (2024)  
+  Topic: *Efficiency and Optimality in Electrochemical Battery Model Parameter Identification: A Comparative Study of Estimation Techniques*
+- Symposium on Physics and Machine Learning for Batteries, Aachen, Germany (2025)
+- OMES Symposium, Genk, Belgium (2025)
 
 ## <i class="fa-solid fa-code-branch"></i> Open-Source & Community
 

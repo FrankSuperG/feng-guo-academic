@@ -2,6 +2,7 @@
 layout: about
 title: About
 description: Academic homepage of Feng Guo, FWO Senior Postdoctoral Fellow, with research focus on electrochemical battery modeling, AI-enhanced BMS, and robust state estimation.
+keywords: Feng Guo, battery management systems, electrochemical model, lithium iron phosphate, SOC estimation, fault diagnosis, FWO, VITO, UHasselt
 permalink: /
 subtitle: FWO Senior Postdoctoral Fellow · Joint Postdoc at VITO & UHasselt (Belgium)
 
