@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "Curriculum vitae of Feng Guo, including appointments, representative publications, awards, projects, and scholarly service.",
+          description: "Curriculum vitae of Feng Guo, including appointments, representative publications, awards, projects, conferences, and scholarly service.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/feng-guo-academic/cv/";
