@@ -76,23 +76,28 @@ jobs:
           fi
 
       - name: Report citations.yml change in summary
+        id: citation_changes
         run: |
           echo "📋 Comparing citation file hashes..."
           if [ "${{ steps.before.outputs.sha_before }}" != "${{ steps.after.outputs.sha_after }}" ]; then
             echo "✅ _data/citations.yml was updated."
             echo "✅ _data/citations.yml was updated." >> $GITHUB_STEP_SUMMARY
+            echo "changed=true" >> $GITHUB_OUTPUT
           else
             echo "ℹ️ _data/citations.yml was not changed."
             echo "ℹ️ _data/citations.yml was not changed." >> $GITHUB_STEP_SUMMARY
+            echo "changed=false" >> $GITHUB_OUTPUT
           fi
 
       - name: Configure Git
+        if: steps.citation_changes.outputs.changed == 'true'
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           echo "🔧 Git configured."
 
       - name: Commit and push if changed
+        if: steps.citation_changes.outputs.changed == 'true'
         run: |
           git add _data/citations.yml
           git diff --staged --quiet || (
@@ -100,3 +105,39 @@ jobs:
             git commit -m "Update Google Scholar citations"
             git push
           )
+
+      - name: Set up Ruby for site rebuild
+        if: steps.citation_changes.outputs.changed == 'true'
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+          bundler-cache: true
+
+      - name: Update _config.yml for deployment
+        if: steps.citation_changes.outputs.changed == 'true'
+        uses: fjogeleit/yaml-update-action@main
+        with:
+          commitChange: false
+          valueFile: "_config.yml"
+          propertyPath: "giscus.repo"
+          value: ${{ github.repository }}
+
+      - name: Build site with updated citations
+        if: steps.citation_changes.outputs.changed == 'true'
+        run: |
+          sudo apt-get update && sudo apt-get install -y imagemagick
+          pip3 install --upgrade nbconvert
+          export JEKYLL_ENV=production
+          bundle exec jekyll build
+
+      - name: Purge unused CSS
+        if: steps.citation_changes.outputs.changed == 'true'
+        run: |
+          npm install -g purgecss
+          purgecss -c purgecss.config.js
+
+      - name: Deploy site with updated citations
+        if: steps.citation_changes.outputs.changed == 'true'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _site
