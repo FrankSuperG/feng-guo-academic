@@ -1,10 +1,12 @@
 ---
 layout: profiles
 permalink: /people/
-title: people
-description: members of the lab or group
+title: People
+description: Hidden template people page.
 nav: false
 nav_order: 7
+noindex: true
+sitemap: false
 
 profiles:
   # if you want to include more than one profile, just replicate the following block

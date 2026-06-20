@@ -46,7 +46,39 @@
   {% endif %}
 
   <!-- Entry bib key -->
-  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-9{% else %}col-sm-10{% endif %}">
+  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-9{% else %}col-sm-12{% endif %}">
+    {% assign journal_metric = site.data.journal_metrics[entry.abbr] %}
+    {% unless site.enable_publication_thumbnails %}
+      {% if entry.abbr or journal_metric %}
+        <div class="pub-meta-row">
+          {%- if entry.abbr -%}
+            {%- if site.data.venues[entry.abbr] -%}
+              {% assign venue_style = null %}
+              {% if site.data.venues[entry.abbr].color != blank %}
+                {% assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' %}
+              {%- endif -%}
+              <span
+                class="pub-venue-badge"
+                {% if venue_style %}
+                  {{ venue_style }}
+                {% endif -%}
+              >
+                {% if site.data.venues[entry.abbr].url %}
+                  <a href="{{ site.data.venues[entry.abbr].url }}">{{ entry.abbr }}</a>
+                {% else %}
+                  {{- entry.abbr -}}
+                {% endif %}
+              </span>
+            {% else %}
+              <span class="pub-venue-badge">{{ entry.abbr }}</span>
+            {% endif %}
+          {% endif %}
+          {% if journal_metric %}
+            <span class="pub-journal-metric">JCR {{ journal_metric.jcr }} · IF {{ journal_metric.impact_factor }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endunless %}
     <!-- Title -->
     <div class="title">{{ entry.title }}</div>
     <!-- Author -->
@@ -157,6 +189,8 @@
       {% capture entrytype %}<em>In {{ entry.booktitle }}</em>{% endcapture %}
     {% elsif thesis contains entry.type %}
       {% capture entrytype %}<em>{{ entry.school }}</em>{% endcapture %}
+    {% elsif entry.type == 'misc' and entry.howpublished %}
+      {% capture entrytype %}<em>{{ entry.howpublished }}</em>{% endcapture %}
     {% else %}
       {% capture entrytype %}{% endcapture %}
     {% endif %}
@@ -186,6 +220,21 @@
     <div class="periodical">
       {{ entry.note | strip }}
     </div>
+    {% if entry.pubstate %}
+      <div class="pub-status pub-status-{{ entry.pubstate }}">
+        {% if entry.pubstate == 'published' %}
+          Published / Accepted
+        {% elsif entry.pubstate == 'preprint' %}
+          arXiv Preprint
+        {% elsif entry.pubstate == 'presentation' %}
+          Conference Talk / Report
+        {% elsif entry.pubstate == 'under_review' %}
+          Under Review / Preprint
+        {% else %}
+          {{ entry.pubstate | replace: '_', ' ' | capitalize }}
+        {% endif %}
+      </div>
+    {% endif %}
 
     <!-- Links/Buttons -->
     <div class="links">
@@ -316,7 +365,7 @@
               role="button"
             >
               {% assign citation_count = 0 %}
-              {% assign scholar_id_key = site.scholar_userid | append: ':' | append: entry.google_scholar_id %}
+              {% assign scholar_id_key = site.data.socials.scholar_userid | append: ':' | append: entry.google_scholar_id %}
               {% assign publication_key = entry.google_scholar_id %}
 
               {% if site.data.citations.papers[scholar_id_key] %}

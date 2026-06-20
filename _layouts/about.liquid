@@ -1,21 +1,89 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
+<div class="post{% if page.hero %} academic-home{% endif %}">
+  {% unless page.hero %}
+    <header class="post-header">
+      <h1 class="post-title">
+        {% if site.title == 'blank' %}
+          <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+          {{ site.last_name }}
+        {% else %}
+          {{ site.title }}
+        {% endif %}
+      </h1>
+      <p class="desc">{{ page.subtitle }}</p>
+    </header>
+  {% endunless %}
 
   <article>
-    {% if page.profile %}
+    {% if page.hero %}
+      <section class="academic-hero" aria-labelledby="academic-hero-title">
+        <div class="academic-hero__inner">
+          <div class="academic-hero__copy">
+            {% if page.hero.eyebrow %}
+              <p class="academic-hero__eyebrow">{{ page.hero.eyebrow }}</p>
+            {% endif %}
+            <h1 id="academic-hero-title">{{ page.hero.title | default: site.title }}</h1>
+            {% if page.hero.lead %}
+              <p class="academic-hero__lead">{{ page.hero.lead }}</p>
+            {% endif %}
+
+            {% if page.hero.metrics %}
+              <div class="academic-hero__metrics" aria-label="Research metrics">
+                {% for metric in page.hero.metrics %}
+                  {% assign metric_value = metric.value %}
+                  {% if metric.key == 'citations' %}
+                    {% assign metric_value = site.data.citations.profile.citations | default: metric.value %}
+                  {% elsif metric.key == 'h_index' %}
+                    {% assign metric_value = site.data.citations.profile.h_index | default: metric.value %}
+                  {% endif %}
+                  <div>
+                    <strong>{{ metric_value }}</strong>
+                    <span>{{ metric.label }}</span>
+                  </div>
+                {% endfor %}
+              </div>
+            {% endif %}
+
+            {% if page.hero.actions %}
+              <div class="academic-hero__actions">
+                {% for action in page.hero.actions %}
+                  <a href="{{ action.url | relative_url }}" class="academic-hero__action">
+                    {% if action.icon %}<i class="{{ action.icon }}"></i>{% endif %}
+                    <span>{{ action.label }}</span>
+                  </a>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+
+          {% if page.profile %}
+            <div class="academic-hero__portrait">
+              {% if page.profile.image %}
+                {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+                {%
+                  include figure.liquid loading="eager" path=profile_image_path class="academic-hero__image"
+                  sizes="(min-width: 1080px) 340px, 86vw" alt=page.profile.image cache_bust=true
+                %}
+              {% endif %}
+              {% if page.hero.links %}
+                <div class="academic-hero__links" aria-label="Profile links">
+                  {% for link in page.hero.links %}
+                    <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+                      {% if link.icon %}<i class="{{ link.icon }}"></i>{% endif %}
+                      <span>{{ link.label }}</span>
+                    </a>
+                  {% endfor %}
+                </div>
+              {% elsif page.profile.more_info %}
+                <div class="academic-hero__links">{{ page.profile.more_info }}</div>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      </section>
+    {% elsif page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
         {% if page.profile.image %}
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
@@ -59,7 +127,7 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}

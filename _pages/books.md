@@ -1,8 +1,12 @@
 ---
 layout: book-shelf
-title: bookshelf
+title: Bookshelf
 permalink: /books/
+description: Private reading list page for Feng Guo.
+keywords: Feng Guo bookshelf
 nav: false
+sitemap: false
+noindex: true
 collection: books
 ---
 

@@ -1,9 +1,13 @@
 ---
 layout: default
 permalink: /blog/
-title: blog
+title: Research Notes
+description: Research notes by Feng Guo on electrochemical battery modelling, battery state estimation, and AI-enhanced battery management systems.
+keywords: Feng Guo blog, battery modelling notes, electrochemical battery model, SOC estimation, battery management systems
 nav: false
 nav_order: 1
+noindex: true
+sitemap: false
 pagination:
   enabled: true
   collection: posts

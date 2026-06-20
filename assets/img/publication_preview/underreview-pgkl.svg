@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600" role="img" aria-label="Under review cover: physics-guided residual Kalman learning">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600" role="img" aria-label="Journal of Energy Chemistry cover: physics-guided residual Kalman learning">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0f172a"/>
@@ -13,8 +13,8 @@
     <line x1="150" y1="315" x2="245" y2="315"/>
     <path d="M360 380 C430 255, 525 420, 620 275 S760 320, 820 215"/>
   </g>
-  <text x="70" y="95" fill="#cbd5e1" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="700">UNDER REVIEW</text>
+  <text x="70" y="95" fill="#cbd5e1" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="700">JOURNAL OF ENERGY CHEMISTRY</text>
   <text x="360" y="165" fill="#ffffff" font-size="39" font-family="Arial, Helvetica, sans-serif" font-weight="700">Physics-Guided Residual</text>
   <text x="360" y="211" fill="#ffffff" font-size="39" font-family="Arial, Helvetica, sans-serif" font-weight="700">Kalman Learning</text>
-  <text x="360" y="257" fill="#bfdbfe" font-size="27" font-family="Arial, Helvetica, sans-serif">Robust LFP State Estimation</text>
+  <text x="360" y="257" fill="#bfdbfe" font-size="27" font-family="Arial, Helvetica, sans-serif">Accepted / In Press</text>
 </svg>

@@ -1,0 +1,45 @@
+JEC:
+  impact_factor: "15.6"
+  jcr: "Q1"
+  basis: "Best WOS/JCR category"
+  source: "https://wos-journal.info/journalid/11756"
+JPS:
+  impact_factor: "8.4"
+  jcr: "Q1"
+  basis: "Best WOS/JCR category"
+  source: "https://wos-journal.info/journalid/17320"
+JES:
+  impact_factor: "10.7"
+  jcr: "Q1"
+  basis: "WOS/JCR ENERGY & FUELS"
+  source: "https://wos-journal.info/journalid/19453"
+CPC:
+  impact_factor: "3.9"
+  jcr: "Q1"
+  basis: "Best WOS/JCR category"
+  source: "https://wos-journal.info/journalid/13536"
+Energy:
+  impact_factor: "10.1"
+  jcr: "Q1"
+  basis: "Best WOS/JCR category"
+  source: "https://wos-journal.info/journalid/19457"
+IJER:
+  impact_factor: "4.2"
+  jcr: "Q1"
+  basis: "Best WOS/JCR category"
+  source: "https://wos-journal.info/journalid/13576"
+ATE:
+  impact_factor: "7.5"
+  jcr: "Q1"
+  basis: "Best WOS/JCR category"
+  source: "https://wos-journal.info/journalid/4900"
+Energies:
+  impact_factor: "3.9"
+  jcr: "Q3"
+  basis: "WOS/JCR ENERGY & FUELS"
+  source: "https://wos-journal.info/journalid/15822"
+SAE:
+  impact_factor: "0.8"
+  jcr: "Q4"
+  basis: "WOS/JCR TRANSPORTATION SCIENCE & TECHNOLOGY"
+  source: "https://wos-journal.info/journalid/6804"

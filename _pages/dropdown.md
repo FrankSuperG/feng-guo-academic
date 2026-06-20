@@ -1,8 +1,11 @@
 ---
 layout: page
-title: submenus
+title: Submenus
+description: Hidden navigation helper page.
 nav: false
 nav_order: 8
+noindex: true
+sitemap: false
 dropdown: true
 children:
   - title: bookshelf

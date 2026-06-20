@@ -9,7 +9,7 @@ last_name: Guo
 contact_note: >
   Best contact via email.
 description: >
-  Academic homepage of Feng Guo (FWO Senior Postdoctoral Fellow), focusing on electrochemical battery modeling, AI, and control.
+  Academic homepage of Feng Guo, FWO Senior Postdoctoral Fellow working on electrochemical battery modeling, state estimation, robust control, and AI-enhanced battery management systems.
 footer_text: >
   © Feng Guo. All rights reserved.
 keywords: Feng Guo, academic homepage, electrochemical battery modeling, AI4Batteries, battery management systems, state estimation, robust control, lithium-ion batteries
@@ -59,7 +59,7 @@ posts_in_search: false
 bib_search: true
 
 # Dimensions
-max_width: 930px
+max_width: 1080px
 
 # -----------------------------------------------------------------------------
 # Open Graph & Schema.org
@@ -89,8 +89,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: Feng Guo # blog_name will be displayed in your blog page
+blog_description: Research notes on battery modeling, state estimation, and AI-enhanced BMS
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -214,7 +214,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-socials
   - jekyll-tabs
-  - jekyll-terser
   - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
@@ -225,6 +224,36 @@ defaults:
       path: "assets"
     values:
       sitemap: false
+  - scope:
+      path: ""
+      type: posts
+    values:
+      noindex: true
+      sitemap: false
+  - scope:
+      path: ""
+      type: projects
+    values:
+      noindex: true
+      sitemap: false
+  - scope:
+      path: ""
+      type: books
+    values:
+      noindex: true
+      sitemap: false
+  - scope:
+      path: ""
+      type: news
+    values:
+      noindex: true
+      sitemap: false
+  - scope:
+      path: ""
+      type: teachings
+    values:
+      noindex: true
+      sitemap: false
 
 sass:
   style: compressed
@@ -234,16 +263,8 @@ sass:
 # -----------------------------------------------------------------------------
 
 jekyll-minifier:
-  compress_javascript: false # set to false since we are using terser as the js minifier
+  compress_javascript: false # keep JS unminified so static scripts work without requiring a local JS runtime
   exclude: ["robots.txt", "assets/js/search/*.js"]
-
-# -----------------------------------------------------------------------------
-# Terser
-# -----------------------------------------------------------------------------
-
-terser:
-  compress:
-    drop_console: true
 
 # -----------------------------------------------------------------------------
 # Jekyll Archives
@@ -251,13 +272,13 @@ terser:
 
 jekyll-archives:
   posts:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+    enabled: [] # blog templates are hidden; do not generate searchable archive pages.
     permalinks:
       year: "/blog/:year/"
       tags: "/blog/:type/:name/"
       categories: "/blog/:type/:name/"
   books:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+    enabled: [] # bookshelf templates are hidden; do not generate searchable archive pages.
 
 display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
 display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
@@ -267,8 +288,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Guo]
+  first_name: [Feng, F.]
 
   style: apa
   locale: en
@@ -335,7 +356,7 @@ max_author_limit: 3 # leave blank to always show all authors
 more_authors_animation_delay: 10 # more authors are revealed on click using animation; smaller delay means faster animation
 
 # Enables publication thumbnails. If disabled, none of the publications will display thumbnails, even if specified in the bib entry.
-enable_publication_thumbnails: true
+enable_publication_thumbnails: false
 
 # -----------------------------------------------------------------------------
 # Jekyll Link Attributes

@@ -1,10 +1,13 @@
 ---
 layout: page
 permalink: /teaching/
-title: teaching
-description: Course materials, schedules, and resources for classes taught.
+title: Teaching
+description: Hidden teaching template page.
+keywords: Feng Guo teaching
 nav: false
 nav_order: 6
+noindex: true
+sitemap: false
 calendar: true
 ---
 

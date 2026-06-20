@@ -4,11 +4,11 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 3
-description: Curriculum vitae of Feng Guo, including appointments, representative publications, awards, projects, conferences, and scholarly service.
-keywords: Feng Guo CV, conference talks, battery modeling, ECC 2026, IFAC 2026, ModVal 2026, ACC 2025, ICOA 2024
+description: Curriculum vitae of Feng Guo, FWO Senior Postdoctoral Fellow, including academic appointments, education, publications, battery modelling projects, awards, conference talks, open-source software, and scholarly service.
+keywords: Feng Guo CV, Feng Guo curriculum vitae, FWO Senior Postdoctoral Fellow, VITO, UHasselt, electrochemical battery modelling, battery state estimation, CPG-SPMT, Electrochemical Battery Model Atlas, conference talks, scholarly service
 _styles: |
   .post .post-title {
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
     margin-bottom: 0.4rem;
   }
   .post .post-description {
@@ -74,10 +74,10 @@ _styles: |
 ---
 
 <div class="cv-quick-stats">
-  <span><i class="fa-solid fa-book-open"></i> 22 peer-reviewed papers</span>
-  <span><i class="fa-solid fa-hourglass-half"></i> 8 under review</span>
-  <span><i class="fa-solid fa-certificate"></i> 1 EU patent</span>
-  <span><i class="fa-solid fa-microchip"></i> 28 CN patents</span>
+  <span><i class="fa-solid fa-book-open"></i> 22 published/accepted papers</span>
+  <span><i class="fa-solid fa-link"></i> 9 arXiv-linked works</span>
+  <span><i class="fa-solid fa-quote-right"></i> {{ site.data.citations.profile.citations | default: 459 }} citations</span>
+  <span><i class="fa-solid fa-chart-line"></i> h-index {{ site.data.citations.profile.h_index | default: 12 }}</span>
 </div>
 
 ## <i class="fa-solid fa-briefcase"></i> Academic & Industry Appointments
@@ -97,10 +97,10 @@ _styles: |
 
 ## <i class="fa-solid fa-book-open"></i> Publications Overview
 
-- **22** peer-reviewed articles (published/accepted)
-- **8** manuscripts currently under review
+- **22** published or accepted peer-reviewed papers
+- **9** works with arXiv links
 
-For full details with links and previews, see the [Publications page](/feng-guo-academic/publications/).
+For full details with DOI/arXiv links, JCR quartiles, and impact factors, see the [Publications page](/feng-guo-academic/publications/).
 
 ## <i class="fa-solid fa-flask"></i> Research Projects (PI)
 
@@ -132,7 +132,7 @@ For full details with links and previews, see the [Publications page](/feng-guo-
 - **European Control Conference (ECC 2026)**, Reykjavík, Iceland (2026)  
   Topic: *Residual Bias Compensation Filter for Physics-Based SOC Estimation in Lithium Iron Phosphate Batteries*
 - **American Control Conference (ACC 2025)**, Denver, CO, USA (2025)  
-  Topic: *Identifiability Analysis of a P2D Model & Subsequent SPM-Aided Parameter Estimation*
+  Topic: *Identifiability Analysis of a Pseudo-Two-Dimensional Model & Single Particle Model-Aided Parameter Estimation*
 - **10th IEEE International Conference on Optimization and Applications (ICOA 2024)**, Almería, Spain (2024)  
   Topic: *Efficiency and Optimality in Electrochemical Battery Model Parameter Identification: A Comparative Study of Estimation Techniques*
 - Symposium on Physics and Machine Learning for Batteries, Aachen, Germany (2025)
@@ -140,7 +140,7 @@ For full details with links and previews, see the [Publications page](/feng-guo-
 
 ## <i class="fa-solid fa-code-branch"></i> Open-Source & Community
 
-Open-source contribution: [CPG-SPMT on GitHub](https://github.com/FrankSuperG/CPG-SPMT), a control-oriented parameter-grouped single-particle model with thermal effects that uses parabolic approximation for efficient state-space implementation, enabling battery state estimation and control-oriented BMS research with validated multi-temperature performance.
+Open-source contributions include [CPG-SPMT on GitHub](https://github.com/FrankSuperG/CPG-SPMT), a control-oriented parameter-grouped single-particle model with thermal effects, and [Electrochemical Battery Model Atlas](https://github.com/FrankSuperG/electrochemical-battery-model-atlas), a curated reproducibility guide for public electrochemical battery model repositories.
 
 ## <i class="fa-solid fa-pen-nib"></i> Scholarly Service
 

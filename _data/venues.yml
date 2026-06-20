@@ -1,9 +1,71 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"JPS":
+  url: https://www.sciencedirect.com/journal/journal-of-power-sources
+  color: "#0f766e"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"JES":
+  url: https://www.sciencedirect.com/journal/journal-of-energy-storage
+  color: "#2563eb"
 
-"Vision":
-  color: "#009f36"
+"JEC":
+  url: https://www.sciencedirect.com/journal/journal-of-energy-chemistry
+  color: "#7c2d12"
+
+"CPC":
+  url: https://www.sciencedirect.com/journal/computer-physics-communications
+  color: "#4338ca"
+
+"Energy":
+  url: https://www.sciencedirect.com/journal/energy
+  color: "#b45309"
+
+"IJER":
+  url: https://onlinelibrary.wiley.com/journal/1099114x
+  color: "#0369a1"
+
+"ATE":
+  url: https://www.sciencedirect.com/journal/applied-thermal-engineering
+  color: "#047857"
+
+"Energies":
+  url: https://www.mdpi.com/journal/energies
+  color: "#991b1b"
+
+"SAE":
+  url: https://www.sae.org/publications/technical-papers
+  color: "#334155"
+
+"CHBAH":
+  url: https://www.sciencedirect.com/journal/computers-in-human-behavior-artificial-humans
+  color: "#7e22ce"
+
+"ACC":
+  url: https://acc2025.a2c2.org/
+  color: "#1d4ed8"
+
+"ICOA":
+  url: https://ieeexplore.ieee.org/xpl/conhome/10754231/proceeding
+  color: "#be123c"
+
+"IC_ASET":
+  url: https://ieeexplore.ieee.org/document/11502434
+  color: "#0e7490"
+
+"arXiv":
+  url: https://arxiv.org/
+  color: "#b31b1b"
+
+"ModVal":
+  url: https://modval2026.epfl.ch/
+  color: "#0f766e"
+
+"Seminar":
+  color: "#4338ca"
+
+"Under Review":
+  color: "#b45309"
+
+"Submitted":
+  color: "#6b7280"
+
+"CN":
+  color: "#475569"

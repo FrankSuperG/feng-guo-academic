@@ -1,10 +1,13 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Hidden template project page. Open-source software is listed on the repositories page.
+keywords: Feng Guo projects, battery modelling software
 nav: false
 nav_order: 3
+noindex: true
+sitemap: false
 display_categories: [work, fun]
 horizontal: false
 ---
