@@ -88,12 +88,12 @@ _styles: |
 
 ## <i class="fa-solid fa-graduation-cap"></i> Education
 
-- **Ph.D., Automotive Engineering**, Southwest Jiaotong University (Sep. 2015–Jul. 2020)  
-  Thesis: *Advanced Battery State Estimation Techniques for Electric Vehicle Battery Management Systems*  
+- **Ph.D., Automotive Engineering**, Southwest Jiaotong University (Sep. 2015–Jul. 2020)<br>
+  Thesis: _Advanced Battery State Estimation Techniques for Electric Vehicle Battery Management Systems_<br>
   Advisor: Prof. Guangdi Hu
 
-- **B.Sc., Mechanical Engineering**, Southwest Jiaotong University (Sep. 2011–Jul. 2015)  
-  Top 5% · Thesis: *State of Charge Estimation for Batteries Using Extended Kalman Filter*
+- **B.Sc., Mechanical Engineering**, Southwest Jiaotong University (Sep. 2011–Jul. 2015)<br>
+  Top 5% · Thesis: _State of Charge Estimation for Batteries Using Extended Kalman Filter_
 
 ## <i class="fa-solid fa-book-open"></i> Publications Overview
 
@@ -104,10 +104,10 @@ For full details with DOI/arXiv links, JCR quartiles, and impact factors, see th
 
 ## <i class="fa-solid fa-flask"></i> Research Projects (PI)
 
-- **FWO Senior Postdoctoral Fellowship, Belgium** (2025–present)  
+- **FWO Senior Postdoctoral Fellowship, Belgium** (2025–present)<br>
   Research on battery fault mechanism and fault-tolerant control based on electrochemical models in cloud BMS.
 
-- **Sichuan Provincial “Miaozi” Project, China** (2016–2018)  
+- **Sichuan Provincial “Miaozi” Project, China** (2016–2018)<br>
   Development of hybrid power systems for new energy vehicles (Grant No. 2016RZ0043).
 
 ## <i class="fa-solid fa-trophy"></i> Awards & Honors
@@ -123,18 +123,18 @@ For full details with DOI/arXiv links, JCR quartiles, and impact factors, see th
 
 ## <i class="fa-solid fa-users"></i> Conferences & Symposia (selected)
 
-- **Computer Physics Communications Seminar Series** (2026)  
-  Topic: *Bridging Electrochemical Models and Real-Time Battery Control* · [Event page](https://cassyni.com/events/VLjRX69RDuTd3ozPGfWmWu)
-- **The 22nd Symposium on Modeling and Validation of Electrochemical Energy Technologies (ModVal 2026)**, Lausanne, Switzerland (2026)  
-  Topic: *Electrochemical-Model-Based Voltage Sensor Fault Diagnosis and Fault-Tolerant SOC Estimation for LFP Batteries*
-- **The 23rd IFAC World Congress**, Busan, Republic of Korea (2026)  
-  Topic: *Stability-Guaranteed Dual Kalman Filtering for Electrochemical Battery State Estimation*
-- **European Control Conference (ECC 2026)**, Reykjavík, Iceland (2026)  
-  Topic: *Residual Bias Compensation Filter for Physics-Based SOC Estimation in Lithium Iron Phosphate Batteries*
-- **American Control Conference (ACC 2025)**, Denver, CO, USA (2025)  
-  Topic: *Identifiability Analysis of a Pseudo-Two-Dimensional Model & Single Particle Model-Aided Parameter Estimation*
-- **10th IEEE International Conference on Optimization and Applications (ICOA 2024)**, Almería, Spain (2024)  
-  Topic: *Efficiency and Optimality in Electrochemical Battery Model Parameter Identification: A Comparative Study of Estimation Techniques*
+- **Computer Physics Communications Seminar Series** (2026)<br>
+  Topic: _Bridging Electrochemical Models and Real-Time Battery Control_ · [Event page](https://cassyni.com/events/VLjRX69RDuTd3ozPGfWmWu)
+- **The 22nd Symposium on Modeling and Validation of Electrochemical Energy Technologies (ModVal 2026)**, Lausanne, Switzerland (2026)<br>
+  Topic: _Electrochemical-Model-Based Voltage Sensor Fault Diagnosis and Fault-Tolerant SOC Estimation for LFP Batteries_
+- **The 23rd IFAC World Congress**, Busan, Republic of Korea (2026)<br>
+  Topic: _Stability-Guaranteed Dual Kalman Filtering for Electrochemical Battery State Estimation_
+- **European Control Conference (ECC 2026)**, Reykjavík, Iceland (2026)<br>
+  Topic: _Residual Bias Compensation Filter for Physics-Based SOC Estimation in Lithium Iron Phosphate Batteries_
+- **American Control Conference (ACC 2025)**, Denver, CO, USA (2025)<br>
+  Topic: _Identifiability Analysis of a Pseudo-Two-Dimensional Model & Single Particle Model-Aided Parameter Estimation_
+- **10th IEEE International Conference on Optimization and Applications (ICOA 2024)**, Almería, Spain (2024)<br>
+  Topic: _Efficiency and Optimality in Electrochemical Battery Model Parameter Identification: A Comparative Study of Estimation Techniques_
 - Symposium on Physics and Machine Learning for Batteries, Aachen, Germany (2025)
 - OMES Symposium, Genk, Belgium (2025)
 
@@ -144,4 +144,4 @@ Open-source contributions include [CPG-SPMT on GitHub](https://github.com/FrankS
 
 ## <i class="fa-solid fa-pen-nib"></i> Scholarly Service
 
-Reviewer for leading journals including: *Renewable & Sustainable Energy Reviews, Energy, Journal of Energy Storage, Battery Energy, Renewable Energy, Journal of Electroanalytical Chemistry, Electrical Engineering, World Electric Vehicle Journal, Electronics, Batteries, The Journal of Supercomputing,* and *Complex & Intelligent Systems*.
+Reviewer for leading journals including: _Renewable & Sustainable Energy Reviews, Energy, Journal of Energy Storage, Battery Energy, Renewable Energy, Journal of Electroanalytical Chemistry, Electrical Engineering, World Electric Vehicle Journal, Electronics, Batteries, The Journal of Supercomputing,_ and _Complex & Intelligent Systems_.

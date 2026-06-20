@@ -10,9 +10,9 @@
       "region": "Limburg"
     },
     "profiles": [
-      {"network": "Google Scholar", "url": "https://scholar.google.com/citations?user=z2SHUxkAAAAJ&hl=en"},
-      {"network": "ORCID", "url": "https://orcid.org/0000-0002-5141-8672"},
-      {"network": "GitHub", "url": "https://github.com/FrankSuperG"}
+      { "network": "Google Scholar", "url": "https://scholar.google.com/citations?user=z2SHUxkAAAAJ&hl=en" },
+      { "network": "ORCID", "url": "https://orcid.org/0000-0002-5141-8672" },
+      { "network": "GitHub", "url": "https://github.com/FrankSuperG" }
     ]
   },
   "work": [
@@ -49,8 +49,8 @@
     }
   ],
   "awards": [
-    {"title": "FWO Senior Postdoctoral Fellowship", "date": "2025-01-01", "awarder": "FWO"},
-    {"title": "IEEE Senior Member", "date": "2025-01-01", "awarder": "IEEE"}
+    { "title": "FWO Senior Postdoctoral Fellowship", "date": "2025-01-01", "awarder": "FWO" },
+    { "title": "IEEE Senior Member", "date": "2025-01-01", "awarder": "IEEE" }
   ],
   "skills": [
     {

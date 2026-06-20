@@ -154,7 +154,10 @@
       border: 1px solid var(--global-divider-color);
       border-radius: 8px;
       background: var(--global-card-bg-color);
-      transition: transform var(--ui-motion) ease, box-shadow var(--ui-motion) ease, border-color var(--ui-motion) ease;
+      transition:
+        transform var(--ui-motion) ease,
+        box-shadow var(--ui-motion) ease,
+        border-color var(--ui-motion) ease;
 
       &:hover {
         transform: translateY(-2px);
@@ -348,7 +351,10 @@
           padding: 0.2rem 0.65rem;
           margin: 0;
           font-size: 0.78rem;
-          transition: color var(--ui-motion) ease, border-color var(--ui-motion) ease, background-color var(--ui-motion) ease;
+          transition:
+            color var(--ui-motion) ease,
+            border-color var(--ui-motion) ease,
+            background-color var(--ui-motion) ease;
 
           &:hover {
             color: var(--global-theme-color);
