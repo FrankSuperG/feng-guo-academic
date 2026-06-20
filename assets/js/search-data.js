@@ -11,21 +11,21 @@ ninja.data = [{
     },
   },{id: "nav-publications",
           title: "Publications",
-          description: "Representative and full publication list, including under-review and published papers in battery modeling, estimation, and AI for BMS.",
+          description: "Publications by Feng Guo on electrochemical battery modelling, lithium-ion battery state estimation, parameter identification, fault diagnosis, physics-guided AI, and battery management systems, with DOI, arXiv, JCR quartile, and impact-factor links.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/feng-guo-academic/publications/";
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "Curriculum vitae of Feng Guo, including appointments, representative publications, awards, projects, conferences, and scholarly service.",
+          description: "Curriculum vitae of Feng Guo, FWO Senior Postdoctoral Fellow, including academic appointments, education, publications, battery modelling projects, awards, conference talks, open-source software, and scholarly service.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/feng-guo-academic/cv/";
           },
         },{id: "nav-repositories",
           title: "Repositories",
-          description: "Featured repositories and open-source work by Feng Guo, with emphasis on CPG-SPMT.",
+          description: "Open-source battery modelling software and reproducibility resources by Feng Guo, including CPG-SPMT and Electrochemical Battery Model Atlas for electrochemical battery model implementation, comparison, and validation.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/feng-guo-academic/repositories/";
