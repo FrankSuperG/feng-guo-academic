@@ -3,6 +3,11 @@ JEC:
   jcr: "Q1"
   basis: "Best WOS/JCR category"
   source: "https://wos-journal.info/journalid/11756"
+APEN:
+  impact_factor: "12.2"
+  jcr: "Q1"
+  basis: "WOS/JCR ENERGY & FUELS; ENGINEERING, CHEMICAL"
+  source: "https://www.letpub.com/journal-selector/journal/729"
 JPS:
   impact_factor: "8.4"
   jcr: "Q1"

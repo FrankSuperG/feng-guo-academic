@@ -10,6 +10,10 @@
   url: https://www.sciencedirect.com/journal/journal-of-energy-chemistry
   color: "#7c2d12"
 
+"APEN":
+  url: https://www.sciencedirect.com/journal/applied-energy
+  color: "#155e75"
+
 "CPC":
   url: https://www.sciencedirect.com/journal/computer-physics-communications
   color: "#4338ca"

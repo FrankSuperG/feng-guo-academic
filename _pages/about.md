@@ -11,7 +11,7 @@ hero:
   title: Electrochemical Models for Reliable, Intelligent Battery Control
   lead: I build physics-informed estimation, diagnosis, and control methods that connect high-fidelity battery models with deployable battery management systems.
   metrics:
-    - value: "22"
+    - value: "23"
       label: published & accepted papers
     - key: citations
       value: "459"
@@ -19,8 +19,8 @@ hero:
     - key: h_index
       value: "12"
       label: h-index
-    - value: "9"
-      label: arXiv-linked works
+    - value: "11"
+      label: preprints
   actions:
     - label: Publications
       url: /publications/
