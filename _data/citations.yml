@@ -1,9 +1,9 @@
 metadata:
-  last_updated: '2026-06-22'
+  last_updated: '2026-06-30'
   source: Google Scholar profile z2SHUxkAAAAJ
 profile:
-  citations: 461
-  citations_since_2021: 396
+  citations: 463
+  citations_since_2021: 398
   h_index: 12
   h_index_since_2021: 11
   i10_index: 12
@@ -16,11 +16,11 @@ papers:
   z2SHUxkAAAAJ:eQOLeE2rZwMC:
     title: A Systematic Review of Electrochemical Model-based Lithium-ion Battery State Estimation in Battery Management Systems
     year: '2024'
-    citations: 65
+    citations: 66
   z2SHUxkAAAAJ:2osOgNQ5qMEC:
     title: Lithium-ion battery online rapid state-of-power estimation under multiple constraints
     year: '2018'
-    citations: 47
+    citations: 48
   z2SHUxkAAAAJ:W7OEmFMy1HYC:
     title: State of charge estimation in electric vehicles at various ambient temperatures
     year: '2020'
@@ -89,6 +89,10 @@ papers:
     title: Identifiability Analysis of a Pseudo-Two-Dimensional Model & Single Particle Model-Aided Parameter Estimation*
     year: '2025'
     citations: 1
+  z2SHUxkAAAAJ:Wp0gIr-vW9MC:
+    title: 'Rapid and robust parameter estimation for electrochemical battery models via BOLT: A batch-optimized local-to-global technique'
+    year: '2026'
+    citations: 0
   z2SHUxkAAAAJ:4DMP91E08xMC:
     title: Physics-guided residual Kalman learning for state-of-charge estimation of lithium iron phosphate batteries
     year: '2026'

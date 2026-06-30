@@ -1,10 +1,17 @@
 #!/usr/bin/env python
 
 import os
+import re
 import sys
 import yaml
+import html
+import urllib.request
 from datetime import datetime
-from scholarly import scholarly
+
+try:
+    from scholarly import scholarly
+except ImportError:
+    scholarly = None
 
 
 def load_scholar_user_id() -> str:
@@ -36,31 +43,54 @@ SCHOLAR_USER_ID: str = load_scholar_user_id()
 OUTPUT_FILE: str = "_data/citations.yml"
 
 
-def get_scholar_citations() -> None:
-    """Fetch and update Google Scholar citation data."""
-    print(f"Fetching citations for Google Scholar ID: {SCHOLAR_USER_ID}")
-    today = datetime.now().strftime("%Y-%m-%d")
-    existing_data = None
+def clean_html_text(raw_text: str) -> str:
+    """Convert a small HTML fragment to plain text."""
+    text = re.sub(r"<[^>]+>", "", raw_text)
+    text = html.unescape(text)
+    text = re.sub(r"[\u202a-\u202e]", "", text)
+    return re.sub(r"\s+", " ", text).strip()
 
-    # Check if the output file was already updated today
-    if os.path.exists(OUTPUT_FILE):
-        try:
-            with open(OUTPUT_FILE, "r") as f:
-                existing_data = yaml.safe_load(f)
-            if (
-                existing_data
-                and "metadata" in existing_data
-                and "last_updated" in existing_data["metadata"]
-            ):
-                print(f"Last updated on: {existing_data['metadata']['last_updated']}")
-                if existing_data["metadata"]["last_updated"] == today:
-                    print("Citations data is already up-to-date. Skipping fetch.")
-                    return
-        except Exception as e:
-            print(
-                f"Warning: Could not read existing citation data from {OUTPUT_FILE}: {e}. The file may be missing or corrupted."
+
+def parse_int(raw_value: str) -> int:
+    """Parse Google Scholar integer fields that may contain commas or blanks."""
+    value = clean_html_text(raw_value).replace(",", "")
+    return int(value) if value else 0
+
+
+def empty_citation_data(today: str) -> dict:
+    """Create the citation data structure written to _data/citations.yml."""
+    return {
+        "metadata": {
+            "last_updated": today,
+            "source": f"Google Scholar profile {SCHOLAR_USER_ID}",
+        },
+        "profile": {},
+        "papers": {},
+    }
+
+
+def get_profile_html() -> str:
+    """Fetch the public Google Scholar profile page."""
+    url = (
+        "https://scholar.google.com/citations"
+        f"?user={SCHOLAR_USER_ID}&hl=en&pagesize=100"
+    )
+    request = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": (
+                "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+                "(KHTML, like Gecko) Chrome/120.0 Safari/537.36"
             )
+        },
+    )
+    with urllib.request.urlopen(request, timeout=30) as response:
+        return response.read().decode("utf-8", errors="replace")
 
+
+def get_public_profile_citations(today: str) -> dict:
+    """Fetch citation data from the public Google Scholar profile HTML."""
+    profile_html = get_profile_html()
     citation_data = {
         "metadata": {
             "last_updated": today,
@@ -70,6 +100,62 @@ def get_scholar_citations() -> None:
         "papers": {},
     }
 
+    stat_values = re.findall(r'class="gsc_rsb_std">([^<]*)</td>', profile_html)
+    if len(stat_values) < 6:
+        raise ValueError("Could not find the Google Scholar citation summary table.")
+
+    citation_data["profile"] = {
+        "citations": parse_int(stat_values[0]),
+        "citations_since_2021": parse_int(stat_values[1]),
+        "h_index": parse_int(stat_values[2]),
+        "h_index_since_2021": parse_int(stat_values[3]),
+        "i10_index": parse_int(stat_values[4]),
+        "i10_index_since_2021": parse_int(stat_values[5]),
+    }
+
+    rows = re.findall(r'<tr class="gsc_a_tr">(.*?)</tr>', profile_html, re.DOTALL)
+    if not rows:
+        raise ValueError("Could not find publication rows on the Google Scholar profile.")
+
+    for row in rows:
+        id_match = re.search(
+            rf"citation_for_view={re.escape(SCHOLAR_USER_ID)}:([^\"&]+)", row
+        )
+        title_match = re.search(
+            r'class="gsc_a_at"[^>]*>(.*?)</a>', row, re.DOTALL
+        )
+        year_match = re.search(
+            r'class="gsc_a_h gsc_a_hc gs_ibl">([^<]*)</span>', row
+        )
+        citation_match = re.search(
+            r'class="gsc_a_ac[^"]*"[^>]*>(.*?)</a>', row, re.DOTALL
+        )
+        if not id_match or not title_match:
+            continue
+
+        pub_id = f"{SCHOLAR_USER_ID}:{html.unescape(id_match.group(1))}"
+        title = clean_html_text(title_match.group(1))
+        year = clean_html_text(year_match.group(1)) if year_match else "Unknown Year"
+        citations = parse_int(citation_match.group(1)) if citation_match else 0
+
+        print(f"Found: {title} ({year}) - Citations: {citations}")
+        citation_data["papers"][pub_id] = {
+            "title": title,
+            "year": year,
+            "citations": citations,
+        }
+
+    return citation_data
+
+
+def get_scholarly_citations(today: str) -> dict:
+    """Fetch citation data through the scholarly package as a fallback."""
+    if scholarly is None:
+        raise RuntimeError(
+            "The scholarly package is not installed and the public profile fallback failed."
+        )
+
+    citation_data = empty_citation_data(today)
     scholarly.set_timeout(15)
     scholarly.set_retries(3)
     try:
@@ -131,7 +217,38 @@ def get_scholar_citations() -> None:
                 f"Error processing publication '{pub.get('bib', {}).get('title', 'Unknown')}': {e}. This publication will be skipped."
             )
 
-    # Compare new data with existing data
+    return citation_data
+
+
+def get_scholar_citations() -> None:
+    """Fetch and update Google Scholar citation data."""
+    print(f"Fetching citations for Google Scholar ID: {SCHOLAR_USER_ID}")
+    today = datetime.now().strftime("%Y-%m-%d")
+    existing_data = None
+
+    if os.path.exists(OUTPUT_FILE):
+        try:
+            with open(OUTPUT_FILE, "r") as f:
+                existing_data = yaml.safe_load(f)
+            if (
+                existing_data
+                and "metadata" in existing_data
+                and "last_updated" in existing_data["metadata"]
+            ):
+                print(f"Last updated on: {existing_data['metadata']['last_updated']}")
+        except Exception as e:
+            print(
+                f"Warning: Could not read existing citation data from {OUTPUT_FILE}: {e}. The file may be missing or corrupted."
+            )
+
+    try:
+        citation_data = get_public_profile_citations(today)
+        print("Citation data fetched from the public Google Scholar profile page.")
+    except Exception as public_profile_error:
+        print(f"Public profile fetch failed: {public_profile_error}")
+        print("Falling back to the scholarly package.")
+        citation_data = get_scholarly_citations(today)
+
     if (
         existing_data
         and existing_data.get("profile") == citation_data["profile"]
