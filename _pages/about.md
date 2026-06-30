@@ -8,8 +8,8 @@ subtitle: FWO Senior Postdoctoral Fellow · Joint Postdoc at VITO & UHasselt (Be
 
 hero:
   eyebrow: FWO Senior Postdoctoral Fellow · IEEE Senior Member
-  title: Electrochemical Models for Reliable, Intelligent Battery Control
-  lead: I build physics-informed estimation, diagnosis, and control methods that connect high-fidelity battery models with deployable battery management systems.
+  title: Feng Guo
+  lead: Electrochemical models for reliable, intelligent battery control. I build physics-informed estimation, diagnosis, and control methods that connect high-fidelity battery models with deployable battery management systems.
   metrics:
     - value: "23"
       label: published & accepted papers
@@ -67,7 +67,7 @@ latest_posts:
 
 <section class="home-section home-section--lead">
   <p>
-    I am an <strong>FWO Senior Postdoctoral Fellow</strong> and <strong>IEEE Senior Member</strong>, working jointly with <strong>VITO</strong> and <strong>UHasselt</strong> in Belgium. My research focuses on control-oriented electrochemical battery modelling, state estimation, parameter identification, safety, fault-tolerant control, and physics-guided AI for battery management systems.
+    I am <strong>Feng Guo</strong>, an <strong>FWO Senior Postdoctoral Fellow</strong> and <strong>IEEE Senior Member</strong>, working jointly with <strong>VITO</strong> and <strong>UHasselt</strong> in Belgium. My research focuses on control-oriented electrochemical battery modelling, state estimation, parameter identification, safety, fault-tolerant control, and physics-guided AI for battery management systems.
   </p>
   <p>
     The common thread across my work is deployment: methods should be physically meaningful, computationally efficient, and robust enough to support real battery systems across temperatures, operating profiles, and sensor uncertainty.
