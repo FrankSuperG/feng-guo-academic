@@ -6,6 +6,7 @@ nav: true
 nav_order: 3
 description: Curriculum vitae of Feng Guo, FWO Senior Postdoctoral Fellow, including academic appointments, education, publications, battery modelling projects, awards, conference talks, open-source software, and scholarly service.
 keywords: Feng Guo CV, Feng Guo curriculum vitae, FWO Senior Postdoctoral Fellow, VITO, UHasselt, electrochemical battery modelling, battery state estimation, CPG-SPMT, Electrochemical Battery Model Atlas, conference talks, scholarly service
+last_modified_at: 2026-06-30
 _styles: |
   .post .post-title {
     letter-spacing: 0;

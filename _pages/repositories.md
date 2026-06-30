@@ -4,6 +4,7 @@ permalink: /repositories/
 title: Repositories
 description: Open-source battery modelling software and reproducibility resources by Feng Guo, including CPG-SPMT and Electrochemical Battery Model Atlas for electrochemical battery model implementation, comparison, and validation.
 keywords: Feng Guo GitHub, CPG-SPMT, Electrochemical Battery Model Atlas, electrochemical battery model software, battery model reproducibility, lithium-ion battery simulation, control-oriented battery modelling, open-source BMS tools
+last_modified_at: 2026-06-30
 nav: true
 nav_order: 4
 ---

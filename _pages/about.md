@@ -3,6 +3,7 @@ layout: about
 title: About
 description: Feng Guo is an FWO Senior Postdoctoral Fellow at VITO and UHasselt working on control-oriented electrochemical battery modelling, SOC estimation, fault diagnosis, and physics-guided AI for battery management systems.
 keywords: Feng Guo, FWO Senior Postdoctoral Fellow, VITO, UHasselt, electrochemical battery modelling, battery state estimation, parameter identification, SOC estimation, lithium iron phosphate batteries, battery safety, fault diagnosis, fault-tolerant control, physics-guided AI, battery management systems
+last_modified_at: 2026-06-30
 permalink: /
 subtitle: FWO Senior Postdoctoral Fellow · Joint Postdoc at VITO & UHasselt (Belgium)
 

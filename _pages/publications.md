@@ -4,6 +4,7 @@ permalink: /publications/
 title: Publications
 description: Publications by Feng Guo on electrochemical battery modelling, lithium-ion battery state estimation, parameter identification, fault diagnosis, physics-guided AI, and battery management systems, with DOI, preprint, JCR quartile, and impact-factor links.
 keywords: Feng Guo publications, electrochemical battery modelling papers, Journal of Power Sources, Journal of Energy Storage, Journal of Energy Chemistry, SOC estimation, battery parameter identification, battery fault diagnosis, physics-guided AI, arXiv battery preprints, SSRN battery preprints, JCR quartile, impact factor
+last_modified_at: 2026-06-30
 nav: true
 nav_order: 2
 ---
