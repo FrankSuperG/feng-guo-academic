@@ -28,7 +28,7 @@ jobs:
         run: |
           echo "🔧 Installing dependencies..."
           python -m pip install --upgrade pip
-          pip install pyyaml
+          pip install pyyaml scholarly
 
       - name: Save current citations.yml hash
         id: before
@@ -46,6 +46,10 @@ jobs:
       - name: Run citation update script
         id: run_citation_update
         shell: bash
+        env:
+          CITATION_NETWORK_TIMEOUT: "20"
+          USE_SCHOLARLY_FALLBACK: "1"
+          SCHOLARLY_FALLBACK_TIMEOUT: "120"
         run: |
           set +e
           echo "🚀 Running citation update script..."

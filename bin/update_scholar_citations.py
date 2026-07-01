@@ -5,11 +5,24 @@ import re
 import sys
 import yaml
 import html
+import signal
 import socket
 import urllib.request
+from contextlib import contextmanager
 from datetime import datetime
 
-NETWORK_TIMEOUT_SECONDS = int(os.environ.get("CITATION_NETWORK_TIMEOUT", "20"))
+
+def env_int(name: str, default: int) -> int:
+    """Read a positive integer environment setting."""
+    try:
+        value = int(os.environ.get(name, str(default)))
+        return value if value > 0 else default
+    except ValueError:
+        return default
+
+
+NETWORK_TIMEOUT_SECONDS = env_int("CITATION_NETWORK_TIMEOUT", 20)
+SCHOLARLY_FALLBACK_TIMEOUT_SECONDS = env_int("SCHOLARLY_FALLBACK_TIMEOUT", 120)
 USE_SCHOLARLY_FALLBACK = os.environ.get("USE_SCHOLARLY_FALLBACK", "").lower() in {
     "1",
     "true",
@@ -17,6 +30,31 @@ USE_SCHOLARLY_FALLBACK = os.environ.get("USE_SCHOLARLY_FALLBACK", "").lower() in
 }
 
 socket.setdefaulttimeout(NETWORK_TIMEOUT_SECONDS)
+
+
+class CitationUpdateTimeout(TimeoutError):
+    """Raised when a citation update stage exceeds its local deadline."""
+
+
+@contextmanager
+def time_limit(seconds: int, label: str):
+    """Limit slow fallback calls so scheduled workflows do not hang indefinitely."""
+    if not hasattr(signal, "SIGALRM"):
+        yield
+        return
+
+    previous_handler = signal.getsignal(signal.SIGALRM)
+
+    def handle_timeout(_signum, _frame):
+        raise CitationUpdateTimeout(f"{label} exceeded {seconds} seconds")
+
+    signal.signal(signal.SIGALRM, handle_timeout)
+    signal.alarm(seconds)
+    try:
+        yield
+    finally:
+        signal.alarm(0)
+        signal.signal(signal.SIGALRM, previous_handler)
 
 
 def load_scholar_user_id() -> str:
@@ -163,26 +201,25 @@ def get_scholarly_citations(today: str) -> dict:
         )
 
     citation_data = empty_citation_data(today)
-    scholarly.set_timeout(15)
-    scholarly.set_retries(3)
+    scholarly.set_timeout(10)
+    scholarly.set_retries(1)
     try:
         author = scholarly.search_author_id(SCHOLAR_USER_ID)
         author_data = scholarly.fill(author)
     except Exception as e:
-        print(
+        raise RuntimeError(
             f"Error fetching author data from Google Scholar for user ID '{SCHOLAR_USER_ID}': {e}. Please check your internet connection and Scholar user ID."
-        )
-        sys.exit(1)
+        ) from e
 
     if not author_data:
-        print(
+        raise RuntimeError(
             f"Could not fetch author data for user ID '{SCHOLAR_USER_ID}'. Please verify the Scholar user ID and try again."
         )
-        sys.exit(1)
 
     if "publications" not in author_data:
-        print(f"No publications found in author data for user ID '{SCHOLAR_USER_ID}'.")
-        sys.exit(1)
+        raise RuntimeError(
+            f"No publications found in author data for user ID '{SCHOLAR_USER_ID}'."
+        )
 
     citation_data["profile"] = {
         "citations": author_data.get("citedby", 0),
@@ -254,8 +291,20 @@ def get_scholar_citations() -> None:
     except Exception as public_profile_error:
         print(f"Public profile fetch failed: {public_profile_error}")
         if USE_SCHOLARLY_FALLBACK:
-            print("Falling back to the scholarly package.")
-            citation_data = get_scholarly_citations(today)
+            print(
+                f"Falling back to the scholarly package with a {SCHOLARLY_FALLBACK_TIMEOUT_SECONDS}-second deadline."
+            )
+            try:
+                with time_limit(
+                    SCHOLARLY_FALLBACK_TIMEOUT_SECONDS, "scholarly fallback"
+                ):
+                    citation_data = get_scholarly_citations(today)
+            except Exception as scholarly_error:
+                print(f"Scholarly fallback failed: {scholarly_error}")
+                if existing_data:
+                    print("Keeping existing citation data unchanged.")
+                    return
+                sys.exit(1)
         elif existing_data:
             print(
                 "Keeping existing citation data unchanged. Set USE_SCHOLARLY_FALLBACK=1 to allow the slower scholarly fallback."
