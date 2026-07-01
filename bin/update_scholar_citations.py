@@ -5,13 +5,18 @@ import re
 import sys
 import yaml
 import html
+import socket
 import urllib.request
 from datetime import datetime
 
-try:
-    from scholarly import scholarly
-except ImportError:
-    scholarly = None
+NETWORK_TIMEOUT_SECONDS = int(os.environ.get("CITATION_NETWORK_TIMEOUT", "20"))
+USE_SCHOLARLY_FALLBACK = os.environ.get("USE_SCHOLARLY_FALLBACK", "").lower() in {
+    "1",
+    "true",
+    "yes",
+}
+
+socket.setdefaulttimeout(NETWORK_TIMEOUT_SECONDS)
 
 
 def load_scholar_user_id() -> str:
@@ -84,7 +89,7 @@ def get_profile_html() -> str:
             )
         },
     )
-    with urllib.request.urlopen(request, timeout=30) as response:
+    with urllib.request.urlopen(request, timeout=NETWORK_TIMEOUT_SECONDS) as response:
         return response.read().decode("utf-8", errors="replace")
 
 
@@ -150,7 +155,9 @@ def get_public_profile_citations(today: str) -> dict:
 
 def get_scholarly_citations(today: str) -> dict:
     """Fetch citation data through the scholarly package as a fallback."""
-    if scholarly is None:
+    try:
+        from scholarly import scholarly
+    except ImportError:
         raise RuntimeError(
             "The scholarly package is not installed and the public profile fallback failed."
         )
@@ -246,8 +253,19 @@ def get_scholar_citations() -> None:
         print("Citation data fetched from the public Google Scholar profile page.")
     except Exception as public_profile_error:
         print(f"Public profile fetch failed: {public_profile_error}")
-        print("Falling back to the scholarly package.")
-        citation_data = get_scholarly_citations(today)
+        if USE_SCHOLARLY_FALLBACK:
+            print("Falling back to the scholarly package.")
+            citation_data = get_scholarly_citations(today)
+        elif existing_data:
+            print(
+                "Keeping existing citation data unchanged. Set USE_SCHOLARLY_FALLBACK=1 to allow the slower scholarly fallback."
+            )
+            return
+        else:
+            print(
+                "No existing citation data is available, so the citation update cannot continue."
+            )
+            sys.exit(1)
 
     if (
         existing_data

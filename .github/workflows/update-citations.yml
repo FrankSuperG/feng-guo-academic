@@ -28,7 +28,7 @@ jobs:
         run: |
           echo "🔧 Installing dependencies..."
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install pyyaml
 
       - name: Save current citations.yml hash
         id: before
@@ -50,12 +50,16 @@ jobs:
           set +e
           echo "🚀 Running citation update script..."
           start_time=$(date)
-          timeout 240 python bin/update_scholar_citations.py
+          timeout 180 python -u bin/update_scholar_citations.py
           status=$?
           end_time=$(date)
           if [ $status -eq 0 ]; then
             echo "✅ Citation update succeeded (started at $start_time, ended at $end_time)."
             echo "✅ Citation update succeeded." >> $GITHUB_STEP_SUMMARY
+          elif [ $status -eq 124 ]; then
+            echo "⚠️ Citation update timed out after 180 seconds (started at $start_time, ended at $end_time). Keeping existing citation data."
+            echo "⚠️ Citation update timed out after 180 seconds. Existing citation data was kept." >> $GITHUB_STEP_SUMMARY
+            echo "::warning::Citation update timed out after 180 seconds; keeping existing citation data."
           else
             echo "❌ Citation update script failed with exit code $status (started at $start_time, ended at $end_time)."
             echo "❌ Citation update script failed with exit code $status." >> $GITHUB_STEP_SUMMARY
