@@ -1,9 +1,9 @@
 metadata:
-  last_updated: '2026-07-01'
+  last_updated: '2026-07-08'
   source: Google Scholar profile z2SHUxkAAAAJ
 profile:
-  citations: 471
-  citations_since_2021: 406
+  citations: 475
+  citations_since_2021: 410
   h_index: 12
   h_index_since_2021: 11
   i10_index: 12
@@ -16,7 +16,7 @@ papers:
   z2SHUxkAAAAJ:eQOLeE2rZwMC:
     title: A Systematic Review of Electrochemical Model-based Lithium-ion Battery State Estimation in Battery Management Systems
     year: '2024'
-    citations: 67
+    citations: 70
   z2SHUxkAAAAJ:2osOgNQ5qMEC:
     title: Lithium-ion battery online rapid state-of-power estimation under multiple constraints
     year: '2018'
@@ -48,7 +48,7 @@ papers:
   z2SHUxkAAAAJ:Se3iqnhoufwC:
     title: 'Review of the Safe Operating Area (SOA) for Batteries: Evolving concepts and structured frameworks'
     year: '2025'
-    citations: 14
+    citations: 15
   z2SHUxkAAAAJ:zYLM7Y9cAGgC:
     title: Switched energy management strategy for fuel cell hybrid vehicle based on switch network
     year: '2020'
