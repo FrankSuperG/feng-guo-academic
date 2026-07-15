@@ -2,7 +2,7 @@ name: Update Google Scholar Citations
 
 on:
   schedule:
-    - cron: "0 0 * * 1,3,5" # Every Monday, Wednesday, and Friday at 00:00 UTC
+    - cron: "0 0 * * 1" # Every Monday at 00:00 UTC; GitHub may delay scheduled runs
   workflow_dispatch:
 
 permissions:
