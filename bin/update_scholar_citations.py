@@ -5,8 +5,10 @@ import re
 import sys
 import yaml
 import html
+import json
 import signal
 import socket
+import urllib.parse
 import urllib.request
 from contextlib import contextmanager
 from datetime import datetime
@@ -110,6 +112,89 @@ def empty_citation_data(today: str) -> dict:
         "profile": {},
         "papers": {},
     }
+
+
+def get_recent_metric(metric: dict) -> int:
+    """Return the rolling five-year value regardless of Scholar's year label."""
+    for key, value in metric.items():
+        if key != "all":
+            return int(value or 0)
+    return 0
+
+
+def parse_serpapi_response(payload: dict, today: str) -> dict:
+    """Convert a Google Scholar Author API response to the site's data format."""
+    if payload.get("error"):
+        raise RuntimeError(f"SerpApi returned an error: {payload['error']}")
+
+    cited_by_rows = payload.get("cited_by", {}).get("table", [])
+    metrics = {
+        key: value
+        for row in cited_by_rows
+        for key, value in row.items()
+        if isinstance(value, dict)
+    }
+    required_metrics = {"citations", "h_index", "i10_index"}
+    if not required_metrics.issubset(metrics):
+        raise ValueError("SerpApi response is missing Google Scholar profile metrics.")
+
+    articles = payload.get("articles", [])
+    if not articles:
+        raise ValueError("SerpApi response does not contain any Scholar articles.")
+
+    citation_data = {
+        "metadata": {
+            "last_updated": today,
+            "source": f"Google Scholar via SerpApi ({SCHOLAR_USER_ID})",
+        },
+        "profile": {
+            "citations": int(metrics["citations"].get("all", 0)),
+            "citations_since_2021": get_recent_metric(metrics["citations"]),
+            "h_index": int(metrics["h_index"].get("all", 0)),
+            "h_index_since_2021": get_recent_metric(metrics["h_index"]),
+            "i10_index": int(metrics["i10_index"].get("all", 0)),
+            "i10_index_since_2021": get_recent_metric(metrics["i10_index"]),
+        },
+        "papers": {},
+    }
+
+    for article in articles:
+        pub_id = article.get("citation_id")
+        title = article.get("title")
+        if not pub_id or not title:
+            continue
+        citations = int(article.get("cited_by", {}).get("value", 0) or 0)
+        year = str(article.get("year") or "Unknown Year")
+        print(f"Found: {title} ({year}) - Citations: {citations}")
+        citation_data["papers"][pub_id] = {
+            "title": title,
+            "year": year,
+            "citations": citations,
+        }
+
+    if not citation_data["papers"]:
+        raise ValueError("SerpApi response contains no usable Scholar articles.")
+    return citation_data
+
+
+def get_serpapi_citations(today: str, api_key: str) -> dict:
+    """Fetch citation data through SerpApi to avoid Scholar blocking cloud IPs."""
+    query = urllib.parse.urlencode(
+        {
+            "engine": "google_scholar_author",
+            "author_id": SCHOLAR_USER_ID,
+            "hl": "en",
+            "num": 100,
+            "api_key": api_key,
+        }
+    )
+    request = urllib.request.Request(
+        f"https://serpapi.com/search.json?{query}",
+        headers={"User-Agent": "feng-guo-academic-citation-updater/1.0"},
+    )
+    with urllib.request.urlopen(request, timeout=NETWORK_TIMEOUT_SECONDS) as response:
+        payload = json.loads(response.read().decode("utf-8"))
+    return parse_serpapi_response(payload, today)
 
 
 def get_profile_html() -> str:
@@ -285,9 +370,26 @@ def get_scholar_citations() -> None:
                 f"Warning: Could not read existing citation data from {OUTPUT_FILE}: {e}. The file may be missing or corrupted."
             )
 
+    serpapi_key = os.environ.get("SERPAPI_KEY", "").strip()
+    citation_data = None
+
+    if serpapi_key:
+        try:
+            citation_data = get_serpapi_citations(today, serpapi_key)
+            print("Citation data fetched through the Google Scholar Author API.")
+        except Exception as serpapi_error:
+            print(f"SerpApi fetch failed: {serpapi_error}")
+            if existing_data:
+                print("Keeping existing citation data unchanged.")
+                return
+            sys.exit(1)
+    else:
+        print("SERPAPI_KEY is not set; trying the public Scholar profile directly.")
+
     try:
-        citation_data = get_public_profile_citations(today)
-        print("Citation data fetched from the public Google Scholar profile page.")
+        if citation_data is None:
+            citation_data = get_public_profile_citations(today)
+            print("Citation data fetched from the public Google Scholar profile page.")
     except Exception as public_profile_error:
         print(f"Public profile fetch failed: {public_profile_error}")
         if USE_SCHOLARLY_FALLBACK:
