@@ -1,9 +1,9 @@
 metadata:
-  last_updated: '2026-07-08'
+  last_updated: '2026-07-15'
   source: Google Scholar profile z2SHUxkAAAAJ
 profile:
-  citations: 475
-  citations_since_2021: 410
+  citations: 476
+  citations_since_2021: 411
   h_index: 12
   h_index_since_2021: 11
   i10_index: 12
@@ -20,7 +20,7 @@ papers:
   z2SHUxkAAAAJ:2osOgNQ5qMEC:
     title: Lithium-ion battery online rapid state-of-power estimation under multiple constraints
     year: '2018'
-    citations: 48
+    citations: 49
   z2SHUxkAAAAJ:W7OEmFMy1HYC:
     title: State of charge estimation in electric vehicles at various ambient temperatures
     year: '2020'
