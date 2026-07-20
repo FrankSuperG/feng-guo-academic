@@ -1,9 +1,9 @@
 metadata:
-  last_updated: '2026-07-15'
-  source: Google Scholar profile z2SHUxkAAAAJ
+  last_updated: '2026-07-20'
+  source: Google Scholar via SerpApi (z2SHUxkAAAAJ)
 profile:
-  citations: 476
-  citations_since_2021: 411
+  citations: 479
+  citations_since_2021: 414
   h_index: 12
   h_index_since_2021: 11
   i10_index: 12
@@ -16,11 +16,11 @@ papers:
   z2SHUxkAAAAJ:eQOLeE2rZwMC:
     title: A Systematic Review of Electrochemical Model-based Lithium-ion Battery State Estimation in Battery Management Systems
     year: '2024'
-    citations: 70
+    citations: 72
   z2SHUxkAAAAJ:2osOgNQ5qMEC:
     title: Lithium-ion battery online rapid state-of-power estimation under multiple constraints
     year: '2018'
-    citations: 49
+    citations: 50
   z2SHUxkAAAAJ:W7OEmFMy1HYC:
     title: State of charge estimation in electric vehicles at various ambient temperatures
     year: '2020'
