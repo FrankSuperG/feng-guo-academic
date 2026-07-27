@@ -1,9 +1,9 @@
 metadata:
-  last_updated: '2026-07-20'
+  last_updated: '2026-07-27'
   source: Google Scholar via SerpApi (z2SHUxkAAAAJ)
 profile:
-  citations: 479
-  citations_since_2021: 414
+  citations: 484
+  citations_since_2021: 418
   h_index: 12
   h_index_since_2021: 11
   i10_index: 12
@@ -12,7 +12,7 @@ papers:
   z2SHUxkAAAAJ:UeHWp8X0CEIC:
     title: A multi-scale parameter adaptive method for state of charge and parameter estimation of lithium-ion batteries using dual Kalman filters
     year: '2019'
-    citations: 135
+    citations: 137
   z2SHUxkAAAAJ:eQOLeE2rZwMC:
     title: A Systematic Review of Electrochemical Model-based Lithium-ion Battery State Estimation in Battery Management Systems
     year: '2024'
@@ -40,7 +40,7 @@ papers:
   z2SHUxkAAAAJ:ufrVoPGSRksC:
     title: Comparative performance analysis of numerical discretization methods for electrochemical model of lithium-ion batteries
     year: '2025'
-    citations: 17
+    citations: 18
   z2SHUxkAAAAJ:Y0pCki6q_DkC:
     title: "A novel semi-analytical solution for calculating the temperature distribution of the lithium-ion batteries during nail penetration based on Green\u2019s function method"
     year: '2020'
@@ -52,11 +52,11 @@ papers:
   z2SHUxkAAAAJ:zYLM7Y9cAGgC:
     title: Switched energy management strategy for fuel cell hybrid vehicle based on switch network
     year: '2020'
-    citations: 14
+    citations: 15
   z2SHUxkAAAAJ:LkGwnXOMwfcC:
     title: A Control-Oriented Simplified Single Particle Model with Grouped Parameter and Sensitivity Analysis for Lithium-Ion Batteries
     year: '2025'
-    citations: 13
+    citations: 14
   z2SHUxkAAAAJ:Tyk-4Ss8FVUC:
     title: Investigation of a model-based approach to estimating soot loading amount in catalyzed diesel particulate filters
     year: '2019'
@@ -95,6 +95,10 @@ papers:
     citations: 0
   z2SHUxkAAAAJ:4DMP91E08xMC:
     title: Physics-guided residual Kalman learning for state-of-charge estimation of lithium iron phosphate batteries
+    year: '2026'
+    citations: 0
+  z2SHUxkAAAAJ:mVmsd5A6BfQC:
+    title: Electrochemical Battery Model Atlas
     year: '2026'
     citations: 0
   z2SHUxkAAAAJ:aqlVkmm33-oC:
