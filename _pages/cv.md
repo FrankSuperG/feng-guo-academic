@@ -6,7 +6,7 @@ nav: true
 nav_order: 3
 description: Curriculum vitae of Feng Guo, FWO Senior Postdoctoral Fellow, including academic appointments, education, publications, battery modelling projects, awards, conference talks, open-source software, and scholarly service.
 keywords: Feng Guo CV, Feng Guo curriculum vitae, FWO Senior Postdoctoral Fellow, VITO, UHasselt, electrochemical battery modelling, battery state estimation, CPG-SPMT, Electrochemical Battery Model Atlas, conference talks, scholarly service
-last_modified_at: 2026-06-30
+last_modified_at: 2026-08-08
 _styles: |
   .post .post-title {
     letter-spacing: 0;
@@ -75,7 +75,7 @@ _styles: |
 ---
 
 <div class="cv-quick-stats">
-  <span><i class="fa-solid fa-book-open"></i> 23 published/accepted papers</span>
+  <span><i class="fa-solid fa-book-open"></i> 24 published/accepted papers</span>
   <span><i class="fa-solid fa-link"></i> 11 preprints</span>
   <span><i class="fa-solid fa-quote-right"></i> {{ site.data.citations.profile.citations | default: 459 }} citations</span>
   <span><i class="fa-solid fa-chart-line"></i> h-index {{ site.data.citations.profile.h_index | default: 12 }}</span>
@@ -98,7 +98,7 @@ _styles: |
 
 ## <i class="fa-solid fa-book-open"></i> Publications Overview
 
-- **23** published or accepted peer-reviewed papers
+- **24** published or accepted peer-reviewed papers
 - **11** preprints with arXiv or SSRN links
 
 For full details with DOI/preprint links, JCR quartiles, and impact factors, see the [Publications page](/feng-guo-academic/publications/).
@@ -124,6 +124,8 @@ For full details with DOI/preprint links, JCR quartiles, and impact factors, see
 
 ## <i class="fa-solid fa-users"></i> Conferences & Symposia (selected)
 
+- **The 9th International Conference on Energy Storage and Intelligent Vehicles (ICEIV 2026)**, Macau, China (2026)<br>
+  Role: Session Co-Chair, _Energy Storage and Integrated Energy Systems I_ · Topic: _Snapshot-Based Aging Interpretation of Field-Aged Graphite/NMC Cells Using a Grouped Electrochemical Model_
 - **Computer Physics Communications Seminar Series** (2026)<br>
   Topic: _Bridging Electrochemical Models and Real-Time Battery Control_ · [Event page](https://cassyni.com/events/VLjRX69RDuTd3ozPGfWmWu)
 - **The 22nd Symposium on Modeling and Validation of Electrochemical Energy Technologies (ModVal 2026)**, Lausanne, Switzerland (2026)<br>

@@ -42,6 +42,10 @@
   url: https://www.sciencedirect.com/journal/computers-in-human-behavior-artificial-humans
   color: "#7e22ce"
 
+"CIS":
+  url: https://link.springer.com/journal/40747
+  color: "#374151"
+
 "ACC":
   url: https://acc2025.a2c2.org/
   color: "#1d4ed8"

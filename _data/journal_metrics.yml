@@ -48,3 +48,8 @@ SAE:
   jcr: "Q4"
   basis: "WOS/JCR TRANSPORTATION SCIENCE & TECHNOLOGY"
   source: "https://wos-journal.info/journalid/6804"
+CIS:
+  impact_factor: "4.5"
+  jcr: "Q2"
+  basis: "WOS/JCR COMPUTER SCIENCE, ARTIFICIAL INTELLIGENCE"
+  source: "https://www.letpub.jp/index.php?journalid=10943&page=journalapp&view=detail"
