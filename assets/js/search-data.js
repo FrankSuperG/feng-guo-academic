@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-publications",
           title: "Publications",
-          description: "Publications by Feng Guo on electrochemical battery modelling, lithium-ion battery state estimation, parameter identification, fault diagnosis, physics-guided AI, and battery management systems, with DOI, preprint, JCR quartile, and impact-factor links.",
+          description: "Publications by Feng Guo on electrochemical battery modelling, battery state estimation, physics-guided AI, graph transformers, Mamba state evolution, and 3D multi-object tracking, with DOI, preprint, JCR quartile, and impact-factor links.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/feng-guo-academic/publications/";
