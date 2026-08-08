@@ -1,9 +1,9 @@
 metadata:
-  last_updated: '2026-08-03'
+  last_updated: '2026-08-08'
   source: Google Scholar via SerpApi (z2SHUxkAAAAJ)
 profile:
-  citations: 477
-  citations_since_2021: 413
+  citations: 482
+  citations_since_2021: 418
   h_index: 12
   h_index_since_2021: 11
   i10_index: 12
@@ -12,11 +12,11 @@ papers:
   z2SHUxkAAAAJ:UeHWp8X0CEIC:
     title: A multi-scale parameter adaptive method for state of charge and parameter estimation of lithium-ion batteries using dual Kalman filters
     year: '2019'
-    citations: 136
+    citations: 138
   z2SHUxkAAAAJ:eQOLeE2rZwMC:
     title: A Systematic Review of Electrochemical Model-based Lithium-ion Battery State Estimation in Battery Management Systems
     year: '2024'
-    citations: 71
+    citations: 74
   z2SHUxkAAAAJ:2osOgNQ5qMEC:
     title: Lithium-ion battery online rapid state-of-power estimation under multiple constraints
     year: '2018'
@@ -97,8 +97,8 @@ papers:
     title: 'Rapid and robust parameter estimation for electrochemical battery models via BOLT: A batch-optimized local-to-global technique'
     year: '2026'
     citations: 0
-  z2SHUxkAAAAJ:9ZlFYXVOiuMC:
-    title: 'Rapid and robust parameter estimation for electrochemical battery models via BOLT: A batch-optimized local-to-global technique'
+  z2SHUxkAAAAJ:dhFuZR0502QC:
+    title: Learning a unified graph transformer with mamba-based dynamic state evolution for 3D multi-object tracking
     year: '2026'
     citations: 0
   z2SHUxkAAAAJ:4DMP91E08xMC:
