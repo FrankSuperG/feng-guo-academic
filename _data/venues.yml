@@ -50,6 +50,10 @@
   url: https://acc2025.a2c2.org/
   color: "#1d4ed8"
 
+"ECC":
+  url: https://ieeexplore.ieee.org/xpl/conhome/11625209/proceeding
+  color: "#00629b"
+
 "ICOA":
   url: https://ieeexplore.ieee.org/xpl/conhome/10754231/proceeding
   color: "#be123c"

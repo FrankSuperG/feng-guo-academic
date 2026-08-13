@@ -2,9 +2,9 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: Publications by Feng Guo on electrochemical battery modelling, battery state estimation, physics-guided AI, graph transformers, Mamba state evolution, and 3D multi-object tracking, with DOI, preprint, JCR quartile, and impact-factor links.
-keywords: Feng Guo publications, electrochemical battery modelling papers, graph transformer, Mamba state evolution, 3D multi-object tracking, Complex and Intelligent Systems, Journal of Power Sources, Journal of Energy Chemistry, SOC estimation, physics-guided AI, arXiv battery preprints, JCR quartile, impact factor
-last_modified_at: 2026-08-08
+description: Publications by Feng Guo on electrochemical battery modelling, battery state estimation, residual bias compensation, physics-guided AI, graph transformers, and 3D multi-object tracking, with DOI, IEEE Xplore, arXiv, JCR quartile, and impact-factor links.
+keywords: Feng Guo publications, electrochemical battery modelling papers, European Control Conference, ECC 2026, residual bias compensation dual extended Kalman filter, LFP SOC estimation, IEEE Xplore, graph transformer, Mamba state evolution, Journal of Power Sources, Journal of Energy Chemistry, physics-guided AI, arXiv battery preprints
+last_modified_at: 2026-08-13
 nav: true
 nav_order: 2
 ---
@@ -18,7 +18,7 @@ nav_order: 2
     </p>
   </div>
   <div class="pub-metrics" aria-label="Publication metrics">
-    <div><strong>24</strong><span>published & accepted papers</span></div>
+    <div><strong>25</strong><span>published & accepted papers</span></div>
     <div><strong>11</strong><span>preprints</span></div>
     <div><strong>{{ site.data.citations.profile.citations | default: 459 }}</strong><span>Google Scholar citations</span></div>
     <div><strong>{{ site.data.citations.profile.h_index | default: 12 }}</strong><span>h-index</span></div>
