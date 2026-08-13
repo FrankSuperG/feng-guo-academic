@@ -1,9 +1,9 @@
 metadata:
-  last_updated: '2026-08-10'
+  last_updated: '2026-08-13'
   source: Google Scholar via SerpApi (z2SHUxkAAAAJ)
 profile:
-  citations: 483
-  citations_since_2021: 419
+  citations: 490
+  citations_since_2021: 426
   h_index: 12
   h_index_since_2021: 11
   i10_index: 12
@@ -12,11 +12,11 @@ papers:
   z2SHUxkAAAAJ:UeHWp8X0CEIC:
     title: A multi-scale parameter adaptive method for state of charge and parameter estimation of lithium-ion batteries using dual Kalman filters
     year: '2019'
-    citations: 138
+    citations: 139
   z2SHUxkAAAAJ:eQOLeE2rZwMC:
     title: A Systematic Review of Electrochemical Model-based Lithium-ion Battery State Estimation in Battery Management Systems
     year: '2024'
-    citations: 75
+    citations: 76
   z2SHUxkAAAAJ:2osOgNQ5qMEC:
     title: Lithium-ion battery online rapid state-of-power estimation under multiple constraints
     year: '2018'
@@ -28,7 +28,7 @@ papers:
   z2SHUxkAAAAJ:qjMakFHDy7sC:
     title: A parameter adaptive method with dead zone for state of charge and parameter estimation of lithium-ion batteries
     year: '2018'
-    citations: 32
+    citations: 33
   z2SHUxkAAAAJ:9yKSN-GCB0IC:
     title: Estimation of the diesel particulate filter soot load based on an equivalent circuit model
     year: '2018'
@@ -40,15 +40,15 @@ papers:
   z2SHUxkAAAAJ:ufrVoPGSRksC:
     title: Comparative performance analysis of numerical discretization methods for electrochemical model of lithium-ion batteries
     year: '2025'
-    citations: 17
+    citations: 18
+  z2SHUxkAAAAJ:Se3iqnhoufwC:
+    title: 'Review of the Safe Operating Area (SOA) for Batteries: Evolving concepts and structured frameworks'
+    year: '2025'
+    citations: 16
   z2SHUxkAAAAJ:Y0pCki6q_DkC:
     title: "A novel semi-analytical solution for calculating the temperature distribution of the lithium-ion batteries during nail penetration based on Green\u2019s function method"
     year: '2020'
     citations: 16
-  z2SHUxkAAAAJ:Se3iqnhoufwC:
-    title: 'Review of the Safe Operating Area (SOA) for Batteries: Evolving concepts and structured frameworks'
-    year: '2025'
-    citations: 15
   z2SHUxkAAAAJ:zYLM7Y9cAGgC:
     title: Switched energy management strategy for fuel cell hybrid vehicle based on switch network
     year: '2020'
@@ -56,7 +56,7 @@ papers:
   z2SHUxkAAAAJ:LkGwnXOMwfcC:
     title: A Control-Oriented Simplified Single Particle Model with Grouped Parameter and Sensitivity Analysis for Lithium-Ion Batteries
     year: '2025'
-    citations: 13
+    citations: 14
   z2SHUxkAAAAJ:YsMSGLbcyi4C:
     title: 'Efficiency and Optimality in Electrochemical Battery Model Parameter Identification: A Comparative Study of Estimation Techniques'
     year: '2024'
@@ -65,12 +65,12 @@ papers:
     title: Investigation of a model-based approach to estimating soot loading amount in catalyzed diesel particulate filters
     year: '2019'
     citations: 6
-  z2SHUxkAAAAJ:YOwf2qJgpHMC:
-    title: 'Optimizing parameter estimation for electrochemical battery model: A comparative analysis of operating profiles on computational efficiency and accuracy'
-    year: '2026'
-    citations: 4
   z2SHUxkAAAAJ:4TOpqqG69KYC:
     title: 'Cpg-spmt: Control-oriented parameter-grouped single particle model with thermal effects for lithium-ion batteries'
+    year: '2026'
+    citations: 5
+  z2SHUxkAAAAJ:YOwf2qJgpHMC:
+    title: 'Optimizing parameter estimation for electrochemical battery model: A comparative analysis of operating profiles on computational efficiency and accuracy'
     year: '2026'
     citations: 4
   z2SHUxkAAAAJ:3fE2CSJIrl8C:
@@ -99,6 +99,10 @@ papers:
     citations: 0
   z2SHUxkAAAAJ:dhFuZR0502QC:
     title: Learning a unified graph transformer with mamba-based dynamic state evolution for 3D multi-object tracking
+    year: '2026'
+    citations: 0
+  z2SHUxkAAAAJ:7PzlFSSx8tAC:
+    title: Residual Bias Compensation Dual Extended Kalman Filter for Physics-Based SOC Estimation in Lithium Iron Phosphate Batteries
     year: '2026'
     citations: 0
   z2SHUxkAAAAJ:4DMP91E08xMC:
