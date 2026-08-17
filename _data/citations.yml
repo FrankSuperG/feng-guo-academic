@@ -1,9 +1,9 @@
 metadata:
-  last_updated: '2026-08-13'
+  last_updated: '2026-08-17'
   source: Google Scholar via SerpApi (z2SHUxkAAAAJ)
 profile:
-  citations: 490
-  citations_since_2021: 426
+  citations: 492
+  citations_since_2021: 428
   h_index: 12
   h_index_since_2021: 11
   i10_index: 12
@@ -12,11 +12,11 @@ papers:
   z2SHUxkAAAAJ:UeHWp8X0CEIC:
     title: A multi-scale parameter adaptive method for state of charge and parameter estimation of lithium-ion batteries using dual Kalman filters
     year: '2019'
-    citations: 139
+    citations: 140
   z2SHUxkAAAAJ:eQOLeE2rZwMC:
     title: A Systematic Review of Electrochemical Model-based Lithium-ion Battery State Estimation in Battery Management Systems
     year: '2024'
-    citations: 76
+    citations: 77
   z2SHUxkAAAAJ:2osOgNQ5qMEC:
     title: Lithium-ion battery online rapid state-of-power estimation under multiple constraints
     year: '2018'
