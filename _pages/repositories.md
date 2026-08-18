@@ -18,42 +18,6 @@ nav_order: 4
 </section>
 
 <div class="repo-showcase">
-  <article class="repo-card repo-card--featured" itemscope itemtype="https://schema.org/Dataset">
-    <img src="https://about.zenodo.org/static/img/logos/zenodo-gradient-square.svg" alt="Zenodo logo for the RoboBATT dataset" />
-    <div>
-      <p class="repo-eyebrow">Open robot battery dataset · Zenodo</p>
-      <h2 itemprop="name">RoboBATT: Multirate Robot Battery and Actuator Telemetry Traces</h2>
-      <p itemprop="description">
-        Two approximately 4.3-hour scripted operating records from an AGIBOT G2 Pro mobile dual-arm robot, linking multirate actuator telemetry with pack-level measurements from two parallel 48 V, 17 Ah lithium iron phosphate batteries.
-      </p>
-      <p class="repo-byline">
-        Feng Guo and Hongxing Liu · Version 1.0.0 · Published 8 August 2026 · CC BY 4.0
-      </p>
-      <ul>
-        <li>Native-cadence 22-channel joint-drive messages and pack-level BMS reports</li>
-        <li>Aligned 10 Hz tables covering current, voltage, SOC, SOH, temperature, joint, and chassis states</li>
-        <li>Reproducible catalogues of 5,920 counter-phase arm cycles and 127 telemetry-derived macrocycles</li>
-        <li>Includes field dictionaries, validation records, analysis code, checksums, and battery duty-cycle profiles</li>
-      </ul>
-      <meta itemprop="version" content="1.0.0" />
-      <meta itemprop="datePublished" content="2026-08-08" />
-      <div class="repo-actions">
-        <a href="https://zenodo.org/records/21853137" class="repo-link" target="_blank" rel="noopener noreferrer" itemprop="url">
-          <i class="fa-solid fa-database"></i>
-          <span>View dataset</span>
-        </a>
-        <a href="https://doi.org/10.5281/zenodo.21853137" class="repo-link repo-link--secondary" target="_blank" rel="noopener noreferrer" itemprop="sameAs">
-          <i class="fa-solid fa-fingerprint"></i>
-          <span>DOI 10.5281/zenodo.21853137</span>
-        </a>
-        <a href="https://creativecommons.org/licenses/by/4.0/" class="repo-link repo-link--secondary" target="_blank" rel="license noopener noreferrer">
-          <i class="fa-solid fa-scale-balanced"></i>
-          <span>CC BY 4.0</span>
-        </a>
-      </div>
-    </div>
-  </article>
-
   <article class="repo-card">
     <img src="https://raw.githubusercontent.com/FrankSuperG/CPG-SPMT/main/cpg_spmt_logo.png" alt="CPG-SPMT logo" />
     <div>
@@ -91,6 +55,42 @@ nav_order: 4
         <i class="fa-brands fa-github"></i>
         <span>FrankSuperG/electrochemical-battery-model-atlas</span>
       </a>
+    </div>
+  </article>
+
+  <article class="repo-card repo-card--featured" itemscope itemtype="https://schema.org/Dataset">
+    <img src="{{ '/assets/img/robobatt-dataset.jpg' | relative_url }}" alt="RoboBATT robot battery and actuator telemetry dataset icon" />
+    <div>
+      <p class="repo-eyebrow">Open robot battery dataset · Zenodo</p>
+      <h2 itemprop="name">RoboBATT: Multirate Robot Battery and Actuator Telemetry Traces</h2>
+      <p itemprop="description">
+        Two approximately 4.3-hour scripted operating records from an AGIBOT G2 Pro mobile dual-arm robot, linking multirate actuator telemetry with pack-level measurements from two parallel 48 V, 17 Ah lithium iron phosphate batteries.
+      </p>
+      <p class="repo-byline">
+        Feng Guo and Hongxing Liu · Version 1.0.0 · Published 8 August 2026 · CC BY 4.0
+      </p>
+      <ul>
+        <li>Native-cadence 22-channel joint-drive messages and pack-level BMS reports</li>
+        <li>Aligned 10 Hz tables covering current, voltage, SOC, SOH, temperature, joint, and chassis states</li>
+        <li>Reproducible catalogues of 5,920 counter-phase arm cycles and 127 telemetry-derived macrocycles</li>
+        <li>Includes field dictionaries, validation records, analysis code, checksums, and battery duty-cycle profiles</li>
+      </ul>
+      <meta itemprop="version" content="1.0.0" />
+      <meta itemprop="datePublished" content="2026-08-08" />
+      <div class="repo-actions">
+        <a href="https://zenodo.org/records/21853137" class="repo-link" target="_blank" rel="noopener noreferrer" itemprop="url">
+          <i class="fa-solid fa-database"></i>
+          <span>View dataset</span>
+        </a>
+        <a href="https://doi.org/10.5281/zenodo.21853137" class="repo-link repo-link--secondary" target="_blank" rel="noopener noreferrer" itemprop="sameAs">
+          <i class="fa-solid fa-fingerprint"></i>
+          <span>DOI 10.5281/zenodo.21853137</span>
+        </a>
+        <a href="https://creativecommons.org/licenses/by/4.0/" class="repo-link repo-link--secondary" target="_blank" rel="license noopener noreferrer">
+          <i class="fa-solid fa-scale-balanced"></i>
+          <span>CC BY 4.0</span>
+        </a>
+      </div>
     </div>
   </article>
 </div>
