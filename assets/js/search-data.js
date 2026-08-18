@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-repositories",
           title: "Repositories",
-          description: "Open-source battery modelling software and reproducibility resources by Feng Guo, including CPG-SPMT and Electrochemical Battery Model Atlas for electrochemical battery model implementation, comparison, and validation.",
+          description: "Open-source software and datasets by Feng Guo, including the RoboBATT robot battery telemetry dataset, CPG-SPMT, and the Electrochemical Battery Model Atlas for reproducible battery modelling and BMS research.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/feng-guo-academic/repositories/";
