@@ -667,6 +667,33 @@ html[data-theme="dark"] {
   }
 }
 
+.repo-card--featured {
+  grid-column: 1 / -1;
+
+  @media (min-width: 861px) {
+    grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.7fr);
+    grid-template-rows: 1fr;
+    align-items: stretch;
+
+    img {
+      height: 100%;
+      min-height: 280px;
+    }
+  }
+}
+
+.repo-byline {
+  margin-top: -0.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.repo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
 .repo-eyebrow {
   margin: 0 0 0.35rem;
   color: var(--global-theme-color) !important;
@@ -691,6 +718,16 @@ html[data-theme="dark"] {
   &:hover {
     background: rgba(38, 152, 186, 0.08);
     text-decoration: none;
+  }
+}
+
+.repo-link--secondary {
+  border-color: var(--global-divider-color);
+  color: var(--global-text-color);
+
+  &:hover {
+    border-color: var(--global-theme-color);
+    color: var(--global-theme-color);
   }
 }
 
