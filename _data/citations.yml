@@ -1,9 +1,9 @@
 metadata:
-  last_updated: '2026-08-17'
+  last_updated: '2026-08-24'
   source: Google Scholar via SerpApi (z2SHUxkAAAAJ)
 profile:
-  citations: 492
-  citations_since_2021: 428
+  citations: 495
+  citations_since_2021: 431
   h_index: 12
   h_index_since_2021: 11
   i10_index: 12
@@ -24,7 +24,7 @@ papers:
   z2SHUxkAAAAJ:W7OEmFMy1HYC:
     title: State of charge estimation in electric vehicles at various ambient temperatures
     year: '2020'
-    citations: 37
+    citations: 38
   z2SHUxkAAAAJ:qjMakFHDy7sC:
     title: A parameter adaptive method with dead zone for state of charge and parameter estimation of lithium-ion batteries
     year: '2018'
@@ -41,22 +41,22 @@ papers:
     title: Comparative performance analysis of numerical discretization methods for electrochemical model of lithium-ion batteries
     year: '2025'
     citations: 18
+  z2SHUxkAAAAJ:Y0pCki6q_DkC:
+    title: "A novel semi-analytical solution for calculating the temperature distribution of the lithium-ion batteries during nail penetration based on Green\u2019s function method"
+    year: '2020'
+    citations: 17
   z2SHUxkAAAAJ:Se3iqnhoufwC:
     title: 'Review of the Safe Operating Area (SOA) for Batteries: Evolving concepts and structured frameworks'
     year: '2025'
     citations: 16
-  z2SHUxkAAAAJ:Y0pCki6q_DkC:
-    title: "A novel semi-analytical solution for calculating the temperature distribution of the lithium-ion batteries during nail penetration based on Green\u2019s function method"
-    year: '2020'
-    citations: 16
+  z2SHUxkAAAAJ:LkGwnXOMwfcC:
+    title: A Control-Oriented Simplified Single Particle Model with Grouped Parameter and Sensitivity Analysis for Lithium-Ion Batteries
+    year: '2025'
+    citations: 15
   z2SHUxkAAAAJ:zYLM7Y9cAGgC:
     title: Switched energy management strategy for fuel cell hybrid vehicle based on switch network
     year: '2020'
     citations: 15
-  z2SHUxkAAAAJ:LkGwnXOMwfcC:
-    title: A Control-Oriented Simplified Single Particle Model with Grouped Parameter and Sensitivity Analysis for Lithium-Ion Batteries
-    year: '2025'
-    citations: 14
   z2SHUxkAAAAJ:YsMSGLbcyi4C:
     title: 'Efficiency and Optimality in Electrochemical Battery Model Parameter Identification: A Comparative Study of Estimation Techniques'
     year: '2024'
