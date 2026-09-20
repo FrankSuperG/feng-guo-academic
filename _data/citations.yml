@@ -1,9 +1,9 @@
 metadata:
-  last_updated: '2026-09-14'
+  last_updated: '2026-09-20'
   source: Google Scholar via SerpApi (z2SHUxkAAAAJ)
 profile:
-  citations: 502
-  citations_since_2021: 437
+  citations: 505
+  citations_since_2021: 440
   h_index: 12
   h_index_since_2021: 11
   i10_index: 12
@@ -16,7 +16,7 @@ papers:
   z2SHUxkAAAAJ:eQOLeE2rZwMC:
     title: A Systematic Review of Electrochemical Model-based Lithium-ion Battery State Estimation in Battery Management Systems
     year: '2024'
-    citations: 79
+    citations: 81
   z2SHUxkAAAAJ:2osOgNQ5qMEC:
     title: Lithium-ion battery online rapid state-of-power estimation under multiple constraints
     year: '2018'
@@ -84,7 +84,7 @@ papers:
   z2SHUxkAAAAJ:KlAtU1dfN6UC:
     title: Residual Bias Compensation Filter for Physics-Based SOC Estimation in Lithium Iron Phosphate Batteries
     year: '2025'
-    citations: 2
+    citations: 3
   z2SHUxkAAAAJ:QIV2ME_5wuYC:
     title: 'Rapid and robust parameter estimation for electrochemical battery models via BOLT: A batch-optimized local-to-global technique'
     year: '2026'
