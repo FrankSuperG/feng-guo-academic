@@ -6,7 +6,7 @@ nav: true
 nav_order: 3
 description: Curriculum vitae of Feng Guo, FWO Senior Postdoctoral Fellow, including academic appointments, education, publications, battery modelling projects, awards, conference talks, open-source software, and scholarly service.
 keywords: Feng Guo CV, Feng Guo curriculum vitae, FWO Senior Postdoctoral Fellow, VITO, UHasselt, electrochemical battery modelling, battery state estimation, CPG-SPMT, Electrochemical Battery Model Atlas, conference talks, scholarly service
-last_modified_at: 2026-08-13
+last_modified_at: 2026-09-20
 _styles: |
   .post .post-title {
     letter-spacing: 0;
@@ -83,6 +83,8 @@ _styles: |
 
 ## <i class="fa-solid fa-briefcase"></i> Academic & Industry Appointments
 
+- **Visiting Researcher**, Warwick Manufacturing Group (WMG), University of Warwick, United Kingdom (Sep. 2026–Present)<br>
+  Collaborating professor: Prof. James Marco
 - **FWO Senior Postdoctoral Fellow**, Research Foundation – Flanders (FWO), Belgium (Oct. 2025–Present)
 - **Postdoctoral Researcher**, Flemish Institute for Technological Research (VITO), Belgium (Dec. 2022–Sep. 2025)
 - **Researcher**, EnergyVille, Belgium (Dec. 2022–Sep. 2025)
