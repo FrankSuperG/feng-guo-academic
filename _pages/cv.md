@@ -147,6 +147,8 @@ For full details with DOI/preprint links, JCR quartiles, and impact factors, see
 
 Open-source contributions include [CPG-SPMT on GitHub](https://github.com/FrankSuperG/CPG-SPMT), a control-oriented parameter-grouped single-particle model with thermal effects, and [Electrochemical Battery Model Atlas](https://github.com/FrankSuperG/electrochemical-battery-model-atlas), a curated reproducibility guide for public electrochemical battery model repositories.
 
+Open datasets include [RoboBATT: Multirate Robot Battery and Actuator Telemetry Traces](https://zenodo.org/records/21853137), co-authored with Hongxing Liu. RoboBATT links battery-management-system measurements from two parallel lithium iron phosphate battery packs with joint-drive and chassis telemetry from an AGIBOT G2 Pro mobile dual-arm robot. The dataset includes aligned 10 Hz tables, field dictionaries, validation records, and analysis code, released under CC BY 4.0. DOI: [10.5281/zenodo.21853137](https://doi.org/10.5281/zenodo.21853137).
+
 ## <i class="fa-solid fa-pen-nib"></i> Scholarly Service
 
 Reviewer for leading journals including: _Renewable & Sustainable Energy Reviews, Energy, Journal of Energy Storage, Battery Energy, Renewable Energy, Journal of Electroanalytical Chemistry, Electrical Engineering, World Electric Vehicle Journal, Electronics, Batteries, The Journal of Supercomputing,_ and _Complex & Intelligent Systems_.
