@@ -74,7 +74,14 @@
             {% endif %}
           {% endif %}
           {% if journal_metric %}
-            <span class="pub-journal-metric">JCR {{ journal_metric.jcr }} · IF {{ journal_metric.impact_factor }}</span>
+            <a
+              class="pub-journal-metric"
+              href="{{ journal_metric.source }}"
+              title="{{ journal_metric.basis | escape }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              >JCR {{ journal_metric.jcr }} · IF {{ journal_metric.impact_factor -}}
+            </a>
           {% endif %}
         </div>
       {% endif %}
