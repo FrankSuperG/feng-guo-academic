@@ -1,9 +1,9 @@
 metadata:
-  last_updated: '2026-09-21'
+  last_updated: '2026-09-27'
   source: Google Scholar via SerpApi (z2SHUxkAAAAJ)
 profile:
-  citations: 508
-  citations_since_2021: 443
+  citations: 520
+  citations_since_2021: 455
   h_index: 12
   h_index_since_2021: 11
   i10_index: 12
@@ -16,7 +16,7 @@ papers:
   z2SHUxkAAAAJ:eQOLeE2rZwMC:
     title: A Systematic Review of Electrochemical Model-based Lithium-ion Battery State Estimation in Battery Management Systems
     year: '2024'
-    citations: 82
+    citations: 86
   z2SHUxkAAAAJ:2osOgNQ5qMEC:
     title: Lithium-ion battery online rapid state-of-power estimation under multiple constraints
     year: '2018'
@@ -28,7 +28,7 @@ papers:
   z2SHUxkAAAAJ:qjMakFHDy7sC:
     title: A parameter adaptive method with dead zone for state of charge and parameter estimation of lithium-ion batteries
     year: '2018'
-    citations: 33
+    citations: 34
   z2SHUxkAAAAJ:9yKSN-GCB0IC:
     title: Estimation of the diesel particulate filter soot load based on an equivalent circuit model
     year: '2018'
@@ -36,15 +36,15 @@ papers:
   z2SHUxkAAAAJ:Se3iqnhoufwC:
     title: 'Review of the Safe Operating Area (SOA) for Batteries: Evolving concepts and structured frameworks'
     year: '2025'
+    citations: 20
+  z2SHUxkAAAAJ:ufrVoPGSRksC:
+    title: Comparative performance analysis of numerical discretization methods for electrochemical model of lithium-ion batteries
+    year: '2025'
     citations: 19
   z2SHUxkAAAAJ:WF5omc3nYNoC:
     title: "The equivalent circuit battery model parameter sensitivity analysis for lithium\u2010ion batteries by Monte Carlo simulation"
     year: '2019'
     citations: 19
-  z2SHUxkAAAAJ:ufrVoPGSRksC:
-    title: Comparative performance analysis of numerical discretization methods for electrochemical model of lithium-ion batteries
-    year: '2025'
-    citations: 18
   z2SHUxkAAAAJ:Y0pCki6q_DkC:
     title: "A novel semi-analytical solution for calculating the temperature distribution of the lithium-ion batteries during nail penetration based on Green\u2019s function method"
     year: '2020'
@@ -52,11 +52,15 @@ papers:
   z2SHUxkAAAAJ:LkGwnXOMwfcC:
     title: A Control-Oriented Simplified Single Particle Model with Grouped Parameter and Sensitivity Analysis for Lithium-Ion Batteries
     year: '2025'
-    citations: 15
+    citations: 16
   z2SHUxkAAAAJ:zYLM7Y9cAGgC:
     title: Switched energy management strategy for fuel cell hybrid vehicle based on switch network
     year: '2020'
     citations: 15
+  z2SHUxkAAAAJ:4TOpqqG69KYC:
+    title: 'Cpg-spmt: Control-oriented parameter-grouped single particle model with thermal effects for lithium-ion batteries'
+    year: '2026'
+    citations: 6
   z2SHUxkAAAAJ:YsMSGLbcyi4C:
     title: 'Efficiency and Optimality in Electrochemical Battery Model Parameter Identification: A Comparative Study of Estimation Techniques'
     year: '2024'
@@ -65,10 +69,6 @@ papers:
     title: Investigation of a model-based approach to estimating soot loading amount in catalyzed diesel particulate filters
     year: '2019'
     citations: 6
-  z2SHUxkAAAAJ:4TOpqqG69KYC:
-    title: 'Cpg-spmt: Control-oriented parameter-grouped single particle model with thermal effects for lithium-ion batteries'
-    year: '2026'
-    citations: 5
   z2SHUxkAAAAJ:YOwf2qJgpHMC:
     title: 'Optimizing parameter estimation for electrochemical battery model: A comparative analysis of operating profiles on computational efficiency and accuracy'
     year: '2026'
@@ -81,26 +81,30 @@ papers:
     title: A model-based research on exhaust temperature control for dpf active regeneration
     year: '2019'
     citations: 4
+  z2SHUxkAAAAJ:4DMP91E08xMC:
+    title: Physics-guided residual Kalman learning for state-of-charge estimation of lithium iron phosphate batteries
+    year: '2026'
+    citations: 3
   z2SHUxkAAAAJ:KlAtU1dfN6UC:
     title: Residual Bias Compensation Filter for Physics-Based SOC Estimation in Lithium Iron Phosphate Batteries
     year: '2025'
     citations: 3
+  z2SHUxkAAAAJ:QIV2ME_5wuYC:
+    title: 'Rapid and robust parameter estimation for electrochemical battery models via BOLT: A batch-optimized local-to-global technique'
+    year: '2026'
+    citations: 2
   z2SHUxkAAAAJ:Zph67rFs4hoC:
     title: 'Assessing intercultural sensitivity in large language models: A comparative study of GPT-3.5 and GPT-4 across eight languages'
     year: '2025'
     citations: 2
-  z2SHUxkAAAAJ:QIV2ME_5wuYC:
-    title: 'Rapid and robust parameter estimation for electrochemical battery models via BOLT: A batch-optimized local-to-global technique'
-    year: '2026'
-    citations: 1
-  z2SHUxkAAAAJ:4DMP91E08xMC:
-    title: Physics-guided residual Kalman learning for state-of-charge estimation of lithium iron phosphate batteries
-    year: '2026'
-    citations: 1
   z2SHUxkAAAAJ:0EnyYjriUFMC:
     title: Identifiability Analysis of a Pseudo-Two-Dimensional Model & Single Particle Model-Aided Parameter Estimation*
     year: '2025'
     citations: 1
+  z2SHUxkAAAAJ:L8Ckcad2t8MC:
+    title: 'When Voltage Sensors Fail: Electrochemically Constrained Fault-Tolerant State Estimation for Flat-Plateau LFP Batteries'
+    year: '2026'
+    citations: 0
   z2SHUxkAAAAJ:dhFuZR0502QC:
     title: Learning a unified graph transformer with mamba-based dynamic state evolution for 3D multi-object tracking
     year: '2026'
