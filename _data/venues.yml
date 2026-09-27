@@ -2,6 +2,10 @@
   url: https://www.sciencedirect.com/journal/journal-of-power-sources
   color: "#0f766e"
 
+"ESM":
+  url: https://www.sciencedirect.com/journal/energy-storage-materials
+  color: "#0f766e"
+
 "JES":
   url: https://www.sciencedirect.com/journal/journal-of-energy-storage
   color: "#2563eb"
