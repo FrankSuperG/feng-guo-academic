@@ -1,9 +1,9 @@
 metadata:
-  last_updated: '2026-09-27'
+  last_updated: '2026-10-05'
   source: Google Scholar via SerpApi (z2SHUxkAAAAJ)
 profile:
-  citations: 520
-  citations_since_2021: 455
+  citations: 525
+  citations_since_2021: 458
   h_index: 12
   h_index_since_2021: 11
   i10_index: 12
@@ -12,7 +12,7 @@ papers:
   z2SHUxkAAAAJ:UeHWp8X0CEIC:
     title: A multi-scale parameter adaptive method for state of charge and parameter estimation of lithium-ion batteries using dual Kalman filters
     year: '2019'
-    citations: 140
+    citations: 143
   z2SHUxkAAAAJ:eQOLeE2rZwMC:
     title: A Systematic Review of Electrochemical Model-based Lithium-ion Battery State Estimation in Battery Management Systems
     year: '2024'
@@ -36,7 +36,7 @@ papers:
   z2SHUxkAAAAJ:Se3iqnhoufwC:
     title: 'Review of the Safe Operating Area (SOA) for Batteries: Evolving concepts and structured frameworks'
     year: '2025'
-    citations: 20
+    citations: 21
   z2SHUxkAAAAJ:ufrVoPGSRksC:
     title: Comparative performance analysis of numerical discretization methods for electrochemical model of lithium-ion batteries
     year: '2025'
@@ -69,13 +69,13 @@ papers:
     title: Investigation of a model-based approach to estimating soot loading amount in catalyzed diesel particulate filters
     year: '2019'
     citations: 6
-  z2SHUxkAAAAJ:YOwf2qJgpHMC:
-    title: 'Optimizing parameter estimation for electrochemical battery model: A comparative analysis of operating profiles on computational efficiency and accuracy'
-    year: '2026'
-    citations: 4
   z2SHUxkAAAAJ:3fE2CSJIrl8C:
     title: Experiment of DPF Temperature Control During Thermal Regeneration
     year: '2020'
+    citations: 5
+  z2SHUxkAAAAJ:YOwf2qJgpHMC:
+    title: 'Optimizing parameter estimation for electrochemical battery model: A comparative analysis of operating profiles on computational efficiency and accuracy'
+    year: '2026'
     citations: 4
   z2SHUxkAAAAJ:MXK_kJrjxJIC:
     title: A model-based research on exhaust temperature control for dpf active regeneration
