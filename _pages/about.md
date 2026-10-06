@@ -20,7 +20,7 @@ hero:
     - key: h_index
       value: "12"
       label: h-index
-    - value: "11"
+    - value: "12"
       label: preprints
   actions:
     - label: Publications

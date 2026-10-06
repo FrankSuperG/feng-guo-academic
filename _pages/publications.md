@@ -19,7 +19,7 @@ nav_order: 2
   </div>
   <div class="pub-metrics" aria-label="Publication metrics">
     <div><strong>26</strong><span>published & accepted papers</span></div>
-    <div><strong>11</strong><span>preprints</span></div>
+    <div><strong>12</strong><span>preprints</span></div>
     <div><strong>{{ site.data.citations.profile.citations | default: 459 }}</strong><span>Google Scholar citations</span></div>
     <div><strong>{{ site.data.citations.profile.h_index | default: 12 }}</strong><span>h-index</span></div>
   </div>
