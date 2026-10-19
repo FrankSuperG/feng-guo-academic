@@ -1,9 +1,9 @@
 metadata:
-  last_updated: '2026-10-12'
+  last_updated: '2026-10-19'
   source: Google Scholar via SerpApi (z2SHUxkAAAAJ)
 profile:
-  citations: 537
-  citations_since_2021: 470
+  citations: 544
+  citations_since_2021: 474
   h_index: 12
   h_index_since_2021: 11
   i10_index: 12
@@ -16,7 +16,7 @@ papers:
   z2SHUxkAAAAJ:eQOLeE2rZwMC:
     title: A Systematic Review of Electrochemical Model-based Lithium-ion Battery State Estimation in Battery Management Systems
     year: '2024'
-    citations: 90
+    citations: 91
   z2SHUxkAAAAJ:2osOgNQ5qMEC:
     title: Lithium-ion battery online rapid state-of-power estimation under multiple constraints
     year: '2018'
@@ -36,11 +36,11 @@ papers:
   z2SHUxkAAAAJ:Se3iqnhoufwC:
     title: 'Review of the Safe Operating Area (SOA) for Batteries: Evolving concepts and structured frameworks'
     year: '2025'
-    citations: 21
+    citations: 22
   z2SHUxkAAAAJ:ufrVoPGSRksC:
     title: Comparative performance analysis of numerical discretization methods for electrochemical model of lithium-ion batteries
     year: '2025'
-    citations: 20
+    citations: 22
   z2SHUxkAAAAJ:WF5omc3nYNoC:
     title: "The equivalent circuit battery model parameter sensitivity analysis for lithium\u2010ion batteries by Monte Carlo simulation"
     year: '2019'
@@ -60,7 +60,7 @@ papers:
   z2SHUxkAAAAJ:4TOpqqG69KYC:
     title: 'Cpg-spmt: Control-oriented parameter-grouped single particle model with thermal effects for lithium-ion batteries'
     year: '2026'
-    citations: 7
+    citations: 8
   z2SHUxkAAAAJ:YOwf2qJgpHMC:
     title: 'Optimizing parameter estimation for electrochemical battery model: A comparative analysis of operating profiles on computational efficiency and accuracy'
     year: '2026'
@@ -73,6 +73,10 @@ papers:
     title: Investigation of a model-based approach to estimating soot loading amount in catalyzed diesel particulate filters
     year: '2019'
     citations: 6
+  z2SHUxkAAAAJ:4DMP91E08xMC:
+    title: Physics-guided residual Kalman learning for state-of-charge estimation of lithium iron phosphate batteries
+    year: '2026'
+    citations: 5
   z2SHUxkAAAAJ:KlAtU1dfN6UC:
     title: Residual Bias Compensation Filter for Physics-Based SOC Estimation in Lithium Iron Phosphate Batteries
     year: '2025'
@@ -81,10 +85,6 @@ papers:
     title: Experiment of DPF Temperature Control During Thermal Regeneration
     year: '2020'
     citations: 5
-  z2SHUxkAAAAJ:4DMP91E08xMC:
-    title: Physics-guided residual Kalman learning for state-of-charge estimation of lithium iron phosphate batteries
-    year: '2026'
-    citations: 4
   z2SHUxkAAAAJ:MXK_kJrjxJIC:
     title: A model-based research on exhaust temperature control for dpf active regeneration
     year: '2019'
@@ -97,13 +97,21 @@ papers:
     title: 'Assessing intercultural sensitivity in large language models: A comparative study of GPT-3.5 and GPT-4 across eight languages'
     year: '2025'
     citations: 2
+  z2SHUxkAAAAJ:L8Ckcad2t8MC:
+    title: 'When voltage sensors fail: Electrochemically constrained fault-tolerant state estimation for flat-plateau LFP batteries'
+    year: '2026'
+    citations: 1
   z2SHUxkAAAAJ:0EnyYjriUFMC:
     title: Identifiability Analysis of a Pseudo-Two-Dimensional Model & Single Particle Model-Aided Parameter Estimation*
     year: '2025'
     citations: 1
-  z2SHUxkAAAAJ:L8Ckcad2t8MC:
-    title: 'When voltage sensors fail: Electrochemically constrained fault-tolerant state estimation for flat-plateau LFP batteries'
-    year: '2026'
+  z2SHUxkAAAAJ:IWHjjKOFINEC:
+    title: Co-optimizing revenue generation and lifetime degradation of lithium-ion batteries in energy markets using physics-based modeling
+    year: '2027'
+    citations: 0
+  z2SHUxkAAAAJ:ZeXyd9-uunAC:
+    title: Adaptive dead-zone dual sliding mode observer for reliable electrochemical model-based SOC estimation
+    year: '2027'
     citations: 0
   z2SHUxkAAAAJ:dhFuZR0502QC:
     title: Learning a unified graph transformer with mamba-based dynamic state evolution for 3D multi-object tracking
