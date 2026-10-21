@@ -1,17 +1,66 @@
-<div class="research-framework" aria-label="Four connected research directions">
-  <ol class="research-framework__flow">
-    {% for interest in page.research_interests %}
-      <li>
-        <a href="#{{ interest.id }}" class="framework-stage framework-stage--{{ interest.key }}">
-          <span class="framework-step"
-            >0{{ forloop.index }}
-            <span>{{ interest.step }}</span></span
-          >
-          <span class="framework-symbol" aria-hidden="true">{% include research-icon.liquid icon=interest.key %}</span>
-          <strong>{{ interest.diagram_label }}</strong>
-        </a>
-        {% unless forloop.last %}<i class="fa-solid fa-chevron-right framework-connector" aria-hidden="true"></i>{% endunless %}
-      </li>
-    {% endfor %}
-  </ol>
-</div>
+<figure class="research-framework" aria-labelledby="framework-caption">
+  <div class="research-framework__flow">
+    <a href="#research-modelling" class="framework-stage framework-stage--model">
+      <span class="framework-stage__eyebrow">01 <b>MODEL</b></span>
+      <svg viewBox="0 0 200 100" role="img" aria-label="Schematic of battery electrodes and ion transport">
+        <path class="framework-wire" d="M41 29V12H159V29" />
+        <rect class="framework-electrode" x="18" y="29" width="46" height="62" rx="4" />
+        <rect class="framework-cathode" x="136" y="29" width="46" height="62" rx="4" />
+        <rect class="framework-separator" x="96" y="29" width="8" height="62" rx="2" />
+        <g class="framework-particles framework-particles--anode"><circle cx="32" cy="43" r="3.5"/><circle cx="50" cy="51" r="3.5"/><circle cx="32" cy="66" r="3.5"/><circle cx="50" cy="78" r="3.5"/></g>
+        <g class="framework-particles"><circle cx="150" cy="43" r="3.5"/><circle cx="168" cy="51" r="3.5"/><circle cx="150" cy="66" r="3.5"/><circle cx="168" cy="78" r="3.5"/></g>
+        <path class="framework-transfer" d="M73 61H88M112 61H127M122 56L127 61L122 66" />
+        <text x="100" y="47" text-anchor="middle">Li+</text>
+      </svg>
+      <span>Electrochemical physics</span>
+      <small>SPM · P2D · thermal coupling</small>
+    </a>
+    <i class="fa-solid fa-arrow-right framework-arrow" aria-hidden="true"></i>
+    <a href="#research-estimation" class="framework-stage framework-stage--estimate">
+      <span class="framework-stage__eyebrow">02 <b>ESTIMATE</b></span>
+      <svg viewBox="0 0 200 100" role="img" aria-label="Conceptual convergence of state and parameter estimates">
+        <path class="framework-gridline" d="M18 31H188M18 56H188M18 81H188" />
+        <path class="framework-axis" d="M15 13V90H191" />
+        <path class="framework-envelope" d="M21 19C51 24 67 51 101 41S151 28 185 40L185 59C150 46 136 64 103 65S54 91 21 84Z" />
+        <path class="framework-envelope framework-envelope--inner" d="M21 38C54 37 70 60 103 49S151 35 185 45L185 54C150 42 135 58 103 58S54 74 21 67Z" />
+        <path class="framework-reference" d="M21 53C60 43 70 66 103 54S150 38 185 50" />
+        <path class="framework-estimate" d="M21 27C32 83 48 43 62 49S77 85 93 66S110 45 129 46S158 38 185 50" />
+        <circle class="framework-endpoint" cx="185" cy="50" r="3" />
+      </svg>
+      <span>States & parameters</span>
+      <small>SOC · observers · identification</small>
+    </a>
+    <i class="fa-solid fa-arrow-right framework-arrow" aria-hidden="true"></i>
+    <a href="#research-safety" class="framework-stage framework-stage--safety">
+      <span class="framework-stage__eyebrow">03 <b>PROTECT</b></span>
+      <div class="framework-safety-visual" aria-hidden="true">
+        <i class="fa-solid fa-shield-halved"></i>
+        <svg viewBox="0 0 120 65">
+          <path class="framework-gridline" d="M4 17H116M4 35H116M4 53H116"/>
+          <path class="framework-reference" d="M4 35H20L28 20L37 49L46 27L55 35H116"/>
+          <path class="framework-estimate" d="M4 35H20L28 20L37 49L46 27L55 35H71L79 14L88 54L97 35H116"/>
+        </svg>
+      </div>
+      <span>Reliable operation</span>
+      <small>Diagnosis · fault tolerance</small>
+    </a>
+    <i class="fa-solid fa-arrow-right framework-arrow" aria-hidden="true"></i>
+    <a href="#research-learning" class="framework-stage framework-stage--learning">
+      <span class="framework-stage__eyebrow">04 <b>LEARN</b></span>
+      <svg viewBox="0 0 200 100" role="img" aria-label="Connected physics and learning models">
+        <g class="framework-network">
+          <path d="M30 26L98 15L173 50L98 85L30 74L98 50L30 26M30 74L98 15M30 26L98 85M98 50H173M98 15V85"/>
+          <path class="framework-network__signal" d="M30 74L98 50H173"/>
+          <circle cx="30" cy="26" r="7"/><circle cx="30" cy="74" r="7"/>
+          <circle cx="98" cy="15" r="7"/><circle cx="98" cy="50" r="7"/><circle cx="98" cy="85" r="7"/>
+          <circle cx="173" cy="50" r="11"/>
+        </g>
+      </svg>
+      <span>Physics-guided intelligence</span>
+      <small>Hybrid learning · deployable BMS</small>
+    </a>
+  </div>
+  <figcaption id="framework-caption">
+    A connected research framework, from cell physics to reliable battery management. Conceptual schematics.
+  </figcaption>
+</figure>
