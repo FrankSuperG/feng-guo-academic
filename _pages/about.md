@@ -55,18 +55,22 @@ hero:
 research_interests:
   - id: research-modelling
     step: MODEL
+    icon: fa-wave-square
     title: Control-oriented electrochemical battery modelling
     description: SPM/P2D model reduction, grouped electrochemical parameters, thermal coupling, and fast parameter identification with BOLT.
   - id: research-estimation
     step: ESTIMATE
+    icon: fa-crosshairs
     title: Battery state estimation and parameter identification
     description: Robust SOC estimation, physics-guided Kalman filtering, observer design, and joint state-parameter estimation under uncertainty.
   - id: research-safety
     step: PROTECT
+    icon: fa-shield-halved
     title: Battery safety, fault diagnosis, and fault-tolerant control
     description: Sensor-fault diagnosis and fault-tolerant SOC estimation for reliable battery operation, extending towards interpretable ageing diagnostics and safety- and lifetime-aware control.
   - id: research-learning
     step: LEARN
+    icon: fa-brain
     title: Physics-guided AI for battery management systems
     description: Hybrid physics-learning models that preserve interpretability while improving robustness under real operating conditions.
 
@@ -103,7 +107,10 @@ latest_posts:
   <div class="research-grid">
     {% for interest in page.research_interests %}
       <article id="{{ interest.id }}">
-        <span class="research-index">0{{ forloop.index }} · {{ interest.step }}</span>
+        <div class="research-meta">
+          <i class="fa-solid {{ interest.icon }} research-icon" aria-hidden="true"></i>
+          <span class="research-index">0{{ forloop.index }} · {{ interest.step }}</span>
+        </div>
         <h3>{{ interest.title }}</h3>
         <p>{{ interest.description }}</p>
       </article>
