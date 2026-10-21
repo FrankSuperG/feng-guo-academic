@@ -1,19 +1,18 @@
 ---
 layout: about
 title: About
-description: Feng Guo is an FWO Senior Postdoctoral Fellow at VITO and UHasselt working on control-oriented electrochemical battery modelling, SOC estimation, fault diagnosis, and physics-guided AI for battery management systems.
-keywords: Feng Guo, FWO Senior Postdoctoral Fellow, VITO, UHasselt, electrochemical battery modelling, battery state estimation, parameter identification, SOC estimation, lithium iron phosphate batteries, battery safety, fault diagnosis, fault-tolerant control, physics-guided AI, battery management systems
+description: Feng Guo researches Physics-Informed Battery Intelligence at VITO and UHasselt, connecting electrochemical modelling, fast parameter identification, robust state estimation, and sensor-fault tolerance for reliable battery management.
+keywords: Feng Guo, Physics-Informed Battery Intelligence, FWO Senior Postdoctoral Fellow, VITO, UHasselt, electrochemical battery modelling, robust battery state estimation, parameter identification, SOC estimation, lithium iron phosphate batteries, battery safety, sensor fault diagnosis, fault-tolerant control, physics-guided AI, battery management systems
 last_modified_at: 2026-10-21
 permalink: /
 subtitle: FWO Senior Postdoctoral Fellow · Joint Postdoc at VITO & UHasselt (Belgium)
-research_visuals: true
 footer_fixed: false
 
 hero:
   eyebrow: FWO Senior Postdoctoral Fellow · IEEE Senior Member
   title: Feng Guo
-  headline: Electrochemical models.<br>Intelligent battery systems.
-  lead: I connect battery physics with estimation, diagnosis, and learning to make battery management more reliable in the real world.
+  headline: Physics-Informed<br>Battery Intelligence
+  lead: Developing physics-informed models and estimation methods to make battery management systems more accurate, robust, and interpretable.
   affiliations: VITO & UHasselt · Belgium<br>Visiting Researcher · WMG, University of Warwick
   metrics:
     - key: published_accepted
@@ -70,53 +69,48 @@ latest_posts:
   enabled: false
 ---
 
-<section class="home-section home-section--lead" aria-labelledby="research-perspective">
-  <p class="home-kicker">Research Perspective</p>
-  <h2 id="research-perspective">Physics at the core. Real systems in mind.</h2>
+<section class="home-section home-section--lead" aria-label="About Feng Guo">
   <p>
-    I am <strong>Feng Guo</strong>, an <strong>FWO Senior Postdoctoral Fellow</strong> and <strong>IEEE Senior Member</strong>, working jointly with <strong>VITO</strong> and <strong>UHasselt</strong> in Belgium. My research develops physically meaningful, computationally efficient methods that support battery management across temperatures, operating profiles, and sensor uncertainty.
+    I am <strong>Feng Guo</strong>, an <strong>FWO Senior Postdoctoral Fellow</strong> and <strong>IEEE Senior Member</strong>, working jointly with <strong>VITO</strong> and <strong>UHasselt</strong> in Belgium. My research connects electrochemical modelling and parameter identification with robust state estimation and fault-tolerant battery management.
+  </p>
+  <p class="home-research-question">
+    <strong>Research question</strong>
+    How can we estimate battery states accurately, reliably, and efficiently when sensing is limited, model parameters are uncertain, and sensors can fail?
   </p>
 </section>
 
 <section class="home-section home-section--research">
-  <p class="home-kicker">From Understanding to Deployment</p>
   <h2>Research Interests</h2>
   {% include research-framework.liquid %}
   <div class="research-grid">
     <article id="research-modelling">
       <span class="research-index">01 / MODELS</span>
-      <i class="fa-solid fa-wave-square"></i>
       <h3>Control-oriented electrochemical battery modelling</h3>
-      <p>Efficient SPM/P2D simplification, parameter grouping, thermal coupling, and state-space implementations for control and BMS use.</p>
+      <p>SPM/P2D model reduction, grouped electrochemical parameters, thermal coupling, and fast parameter identification with BOLT.</p>
     </article>
     <article id="research-estimation">
       <span class="research-index">02 / ESTIMATION</span>
-      <i class="fa-solid fa-crosshairs"></i>
       <h3>Battery state estimation and parameter identification</h3>
-      <p>Robust SOC estimation, Kalman filtering, observer design, and operating-profile-aware electrochemical parameter estimation.</p>
+      <p>Robust SOC estimation, physics-guided Kalman filtering, observer design, and joint state-parameter estimation under uncertainty.</p>
     </article>
     <article id="research-safety">
       <span class="research-index">03 / SAFETY</span>
-      <i class="fa-solid fa-shield-halved"></i>
       <h3>Battery safety, fault diagnosis, and fault-tolerant control</h3>
-      <p>Sensor-fault diagnosis, safety-aware estimation, and fault-tolerant control methods for reliable battery operation.</p>
+      <p>Sensor-fault diagnosis and fault-tolerant SOC estimation for reliable battery operation, extending towards interpretable ageing diagnostics and safety- and lifetime-aware control.</p>
     </article>
     <article id="research-learning">
       <span class="research-index">04 / LEARNING</span>
-      <i class="fa-solid fa-brain"></i>
       <h3>Physics-guided AI for battery management systems</h3>
       <p>Hybrid physics-learning models that preserve interpretability while improving robustness under real operating conditions.</p>
     </article>
   </div>
 </section>
 
-{% include publication-chart.liquid %}
-
 <section class="home-section home-open-research" aria-labelledby="home-open-title">
   <div class="home-section-heading">
     <div>
       <p class="home-kicker">Open Research</p>
-      <h2 id="home-open-title">Models, methods, and data. Shared.</h2>
+      <h2 id="home-open-title">Open-source Software & Datasets</h2>
     </div>
     <a class="home-inline-link" href="{{ '/repositories/' | relative_url }}">All resources <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
   </div>

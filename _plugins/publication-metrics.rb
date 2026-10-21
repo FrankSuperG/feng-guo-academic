@@ -18,22 +18,13 @@ module Jekyll
           entry[:pubstate].to_s != 'presentation'
       end
 
-      published = papers.select { |entry| %w[published accepted].include?(entry[:pubstate].to_s) }
-      years = published.map { |entry| entry[:year].to_s }.select { |year| year.match?(/\A\d{4}\z/) }.map(&:to_i)
-      cumulative = 0
-      by_year = years.empty? ? [] : (years.min..years.max).map do |year|
-        count = published.count { |entry| entry[:year].to_s == year.to_s }
-        cumulative += count
-        { 'year' => year, 'count' => count, 'cumulative' => cumulative }
-      end
-
       site.data['publication_metrics'] = {
-        'published_accepted' => published.size,
+        'published_accepted' => papers.count do |entry|
+          %w[published accepted].include?(entry[:pubstate].to_s)
+        end,
         'preprints' => papers.count do |entry|
           %i[arxiv ssrn].any? { |field| !entry[field].to_s.strip.empty? }
-        end,
-        'by_year' => by_year,
-        'maximum_year_count' => [by_year.map { |row| row['count'] }.max.to_i, 1].max
+        end
       }
     end
   end
