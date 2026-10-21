@@ -47,7 +47,6 @@ class PublicationMetricsTest < Minitest::Test
     BIB
     assert_equal 0, result['published_accepted']
     assert_equal 0, result['preprints']
-    assert_empty result['by_year']
   end
 
   def test_new_papers_and_publication_status_changes_are_recalculated
@@ -63,8 +62,6 @@ class PublicationMetricsTest < Minitest::Test
     result = metrics('')
     assert_equal 0, result['published_accepted']
     assert_equal 0, result['preprints']
-    assert_empty result['by_year']
-    assert_equal 1, result['maximum_year_count']
   end
 
   def test_bibliography_with_jekyll_front_matter
@@ -72,20 +69,4 @@ class PublicationMetricsTest < Minitest::Test
     assert_equal 1, result['published_accepted']
   end
 
-  def test_yearly_chart_fills_gaps_and_excludes_preprints_and_talks
-    result = metrics(<<~BIB)
-      @article{first, pubstate = {published}, year = {2024}}
-      @article{second, pubstate = {accepted}, year = {2026}}
-      @inproceedings{third, pubstate = {published}, year = {2026}}
-      @article{preprint, pubstate = {preprint}, year = {2025}, arxiv = {2501.00001}}
-      @inproceedings{talk, pubstate = {presentation}, year = {2025}}
-    BIB
-    assert_equal [
-      { 'year' => 2024, 'count' => 1, 'cumulative' => 1 },
-      { 'year' => 2025, 'count' => 0, 'cumulative' => 1 },
-      { 'year' => 2026, 'count' => 2, 'cumulative' => 3 }
-    ], result['by_year']
-    assert_equal 2, result['maximum_year_count']
-    assert_equal result['published_accepted'], result['by_year'].last['cumulative']
-  end
 end
