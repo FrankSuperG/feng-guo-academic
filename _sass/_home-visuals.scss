@@ -101,15 +101,27 @@
     }
   }
 
+  .research-framework__viewport {
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--home-accent) var(--global-divider-color);
+    padding-bottom: 0.6rem;
+    scroll-snap-type: x proximity;
+  }
+
   .research-framework__flow {
+    min-width: 900px;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr) 20px minmax(0, 1fr) 20px minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) 36px minmax(0, 1fr) 36px minmax(0, 1fr) 36px minmax(0, 1fr);
     gap: 0.6rem;
     align-items: stretch;
   }
 
   .framework-stage {
     min-width: 0;
+    scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -183,9 +195,10 @@
 
   .framework-arrow {
     align-self: center;
-    color: var(--home-muted);
+    justify-self: center;
+    color: var(--home-accent);
     margin-bottom: 3rem;
-    font-size: 0.9rem;
+    font-size: 1.35rem;
   }
 
   .framework-wire,
@@ -499,15 +512,6 @@ html[data-theme="dark"] .academic-home {
       font-size: 1.32rem;
     }
 
-    .research-framework__flow {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.5rem 1rem;
-    }
-
-    .framework-arrow {
-      display: none;
-    }
-
     .framework-stage {
       span {
         font-size: 0.94rem;
@@ -515,11 +519,6 @@ html[data-theme="dark"] .academic-home {
 
       small {
         font-size: 0.7rem;
-      }
-
-      > svg,
-      > .framework-safety-visual {
-        height: 90px;
       }
     }
 
