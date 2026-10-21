@@ -75,8 +75,8 @@ _styles: |
 ---
 
 <div class="cv-quick-stats">
-  <span><i class="fa-solid fa-book-open"></i> 28 published/accepted papers</span>
-  <span><i class="fa-solid fa-link"></i> 13 preprints</span>
+  <span><i class="fa-solid fa-book-open"></i> {{ site.data.publication_metrics.published_accepted }} published/accepted papers</span>
+  <span><i class="fa-solid fa-link"></i> {{ site.data.publication_metrics.preprints }} preprints</span>
   <span><i class="fa-solid fa-quote-right"></i> {{ site.data.citations.profile.citations | default: 459 }} citations</span>
   <span><i class="fa-solid fa-chart-line"></i> h-index {{ site.data.citations.profile.h_index | default: 12 }}</span>
 </div>
@@ -100,8 +100,8 @@ _styles: |
 
 ## <i class="fa-solid fa-book-open"></i> Publications Overview
 
-- **28** published or accepted peer-reviewed papers
-- **13** preprints with arXiv or SSRN links
+- **{{ site.data.publication_metrics.published_accepted }}** published or accepted peer-reviewed papers
+- **{{ site.data.publication_metrics.preprints }}** preprints with arXiv or SSRN links
 
 For full details with DOI/preprint links, JCR quartiles, and impact factors, see the [Publications page](/feng-guo-academic/publications/).
 

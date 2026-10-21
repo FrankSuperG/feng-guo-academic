@@ -740,6 +740,18 @@ To add publications create a new entry in the [\_bibliography/papers.bib](_bibli
 
 You can add extra information to a publication, like a PDF file in the `assets/pdfs/` directory and add the path to the PDF file in the BibTeX entry with the `pdf` field. Some of the supported fields are: `abstract`, `altmetric`, `annotation`, `arxiv`, `bibtex_show`, `blog`, `code`, `dimensions`, `doi`, `eprint`, `hal`, `html`, `isbn`, `pdf`, `pmid`, `poster`, `slides`, `supp`, `video`, and `website`.
 
+### Automatic publication counts
+
+`_plugins/publication-metrics.rb` calculates `site.data.publication_metrics` from the configured Scholar bibliography at every build. About, Publications, and CV all read this shared data; do not hardcode their publication counts.
+
+- `published_accepted`: article and proceedings entries with `pubstate = {published}` or `pubstate = {accepted}`.
+- `preprints`: article and proceedings entries with a nonempty `arxiv` or `ssrn` field, including published papers with preprints. A paper with both links counts once.
+- Entries with `pubstate = {presentation}` and other entry types are excluded from both counts.
+
+When a preprint is published, update its existing entry rather than adding another copy. Keep the preprint link and update the journal, year, DOI, publication status, and Scholar ID. The existing weekly citation workflow refreshes citation data; it does not add bibliography entries.
+
+The focused checks are in `test/publication_metrics_test.rb` and use Minitest plus the project's BibTeX and Jekyll dependencies.
+
 ### Author annotation
 
 In publications, the author entry for yourself is identified by string array `scholar:last_name` and string array `scholar:first_name` in [\_config.yml](_config.yml). For example, if you have the following entry in your [\_config.yml](_config.yml):

@@ -37,6 +37,8 @@ layout: default
                     {% assign metric_value = site.data.citations.profile.citations | default: metric.value %}
                   {% elsif metric.key == 'h_index' %}
                     {% assign metric_value = site.data.citations.profile.h_index | default: metric.value %}
+                  {% elsif metric.key == 'published_accepted' or metric.key == 'preprints' %}
+                    {% assign metric_value = site.data.publication_metrics[metric.key] %}
                   {% endif %}
                   <div>
                     <strong>{{ metric_value }}</strong>

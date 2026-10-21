@@ -12,7 +12,7 @@ hero:
   title: Feng Guo
   lead: Electrochemical models for reliable, intelligent battery control. I build physics-informed estimation, diagnosis, and control methods that connect high-fidelity battery models with deployable battery management systems.
   metrics:
-    - value: "28"
+    - key: published_accepted
       label: published & accepted papers
     - key: citations
       value: "459"
@@ -20,7 +20,7 @@ hero:
     - key: h_index
       value: "12"
       label: h-index
-    - value: "13"
+    - key: preprints
       label: preprints
   actions:
     - label: Publications
