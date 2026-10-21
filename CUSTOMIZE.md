@@ -47,6 +47,7 @@ Here we will give you some tips on how to customize the website. One important t
       - [Field naming best practices](#field-naming-best-practices)
       - [Complete example: Book reviews with custom adaptations field](#complete-example-book-reviews-with-custom-adaptations-field)
   - [Adding a new publication](#adding-a-new-publication)
+    - [Automatic publication counts](#automatic-publication-counts)
     - [Author annotation](#author-annotation)
     - [Buttons (through custom bibtex keywords)](#buttons-through-custom-bibtex-keywords)
   - [Changing theme color](#changing-theme-color)
