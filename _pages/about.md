@@ -128,21 +128,21 @@ latest_posts:
   </div>
   <div class="home-resource-grid">
     <a class="home-resource" href="https://github.com/FrankSuperG/CPG-SPMT" target="_blank" rel="noopener noreferrer">
-      <img src="https://raw.githubusercontent.com/FrankSuperG/CPG-SPMT/main/cpg_spmt_logo.png" width="72" height="72" alt="CPG-SPMT logo" loading="lazy">
+      {% include figure.liquid path="assets/img/cpg-spmt-logo.png" width="280" height="160" sizes="(max-width: 700px) 280px, 320px" alt="CPG-SPMT logo" loading="lazy" %}
       <span class="home-resource-type">Open-source model</span>
       <h3>CPG-SPMT</h3>
       <p>Control-oriented, parameter-grouped electrochemical modelling with thermal effects.</p>
       <span class="home-resource-destination"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
     </a>
     <a class="home-resource" href="https://github.com/FrankSuperG/electrochemical-battery-model-atlas" target="_blank" rel="noopener noreferrer">
-      <img src="https://raw.githubusercontent.com/FrankSuperG/electrochemical-battery-model-atlas/main/assets/logo.png" width="72" height="72" alt="Electrochemical Battery Model Atlas logo" loading="lazy">
+      {% include figure.liquid path="assets/img/battery-model-atlas-logo.png" width="280" height="160" sizes="(max-width: 700px) 280px, 320px" alt="Electrochemical Battery Model Atlas logo" loading="lazy" %}
       <span class="home-resource-type">Reproducibility guide</span>
       <h3>Battery Model Atlas</h3>
       <p>A curated guide to public electrochemical battery models and reproducible workflows.</p>
       <span class="home-resource-destination"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
     </a>
     <a class="home-resource" href="https://zenodo.org/records/21853137" target="_blank" rel="noopener noreferrer">
-      <img src="{{ '/assets/img/robobatt-dataset.jpg' | relative_url }}" width="72" height="72" alt="RoboBATT dataset logo" loading="lazy">
+      {% include figure.liquid path="assets/img/robobatt-dataset.jpg" class="home-resource-image--square" width="160" height="160" sizes="160px" alt="RoboBATT dataset logo" loading="lazy" %}
       <span class="home-resource-type">Open dataset</span>
       <h3>RoboBATT</h3>
       <p>Real-world robot battery and actuator telemetry for battery systems research.</p>
@@ -152,10 +152,12 @@ latest_posts:
 </section>
 
 <section class="home-section home-section--collab">
-  <p class="home-kicker">Connect</p>
-  <h2>Collaboration</h2>
-  <p>
-    I welcome collaboration on electrochemical model reduction, battery state estimation, physics-informed machine learning, fault-tolerant control, and open-source tools for battery research.
-  </p>
-  <a class="text-link-strong" href="mailto:feng.guo@vito.be">feng.guo@vito.be</a>
+  <div class="home-collab-copy">
+    <p class="home-kicker">Connect</p>
+    <h2>Collaboration</h2>
+    <p>
+      I welcome collaboration on electrochemical model reduction, battery state estimation, physics-informed machine learning, fault-tolerant control, and open-source tools for battery research.
+    </p>
+  </div>
+  <a class="text-link-strong" href="mailto:feng.guo@vito.be"><i class="fa-regular fa-envelope" aria-hidden="true"></i> feng.guo@vito.be <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
 </section>
