@@ -25,27 +25,15 @@ layout: default
               <p class="academic-hero__eyebrow">{{ page.hero.eyebrow }}</p>
             {% endif %}
             <h1 id="academic-hero-title">{{ page.hero.title | default: site.title }}</h1>
+            {% if page.hero.headline %}
+              <p class="academic-hero__headline">{{ page.hero.headline }}</p>
+            {% endif %}
             {% if page.hero.lead %}
               <p class="academic-hero__lead">{{ page.hero.lead }}</p>
             {% endif %}
 
-            {% if page.hero.metrics %}
-              <div class="academic-hero__metrics" aria-label="Research metrics">
-                {% for metric in page.hero.metrics %}
-                  {% assign metric_value = metric.value %}
-                  {% if metric.key == 'citations' %}
-                    {% assign metric_value = site.data.citations.profile.citations | default: metric.value %}
-                  {% elsif metric.key == 'h_index' %}
-                    {% assign metric_value = site.data.citations.profile.h_index | default: metric.value %}
-                  {% elsif metric.key == 'published_accepted' or metric.key == 'preprints' %}
-                    {% assign metric_value = site.data.publication_metrics[metric.key] %}
-                  {% endif %}
-                  <div>
-                    <strong>{{ metric_value }}</strong>
-                    <span>{{ metric.label }}</span>
-                  </div>
-                {% endfor %}
-              </div>
+            {% if page.hero.affiliations %}
+              <p class="academic-hero__affiliations">{{ page.hero.affiliations }}</p>
             {% endif %}
 
             {% if page.hero.actions %}
@@ -66,13 +54,13 @@ layout: default
                 {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
                 {%
                   include figure.liquid loading="eager" path=profile_image_path class="academic-hero__image"
-                  sizes="(min-width: 1080px) 340px, 86vw" alt=page.profile.image cache_bust=true
+                  sizes="(min-width: 1080px) 280px, 70vw" alt="Feng Guo" cache_bust=true
                 %}
               {% endif %}
               {% if page.hero.links %}
                 <div class="academic-hero__links" aria-label="Profile links">
                   {% for link in page.hero.links %}
-                    <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+                    <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" title="{{ link.label }}" aria-label="{{ link.label }}">
                       {% if link.icon %}<i class="{{ link.icon }}"></i>{% endif %}
                       <span>{{ link.label }}</span>
                     </a>
@@ -84,6 +72,24 @@ layout: default
             </div>
           {% endif %}
         </div>
+        {% if page.hero.metrics %}
+          <div class="academic-hero__metrics" aria-label="Research metrics">
+            {% for metric in page.hero.metrics %}
+              {% assign metric_value = metric.value %}
+              {% if metric.key == 'citations' %}
+                {% assign metric_value = site.data.citations.profile.citations | default: metric.value %}
+              {% elsif metric.key == 'h_index' %}
+                {% assign metric_value = site.data.citations.profile.h_index | default: metric.value %}
+              {% elsif metric.key == 'published_accepted' or metric.key == 'preprints' %}
+                {% assign metric_value = site.data.publication_metrics[metric.key] %}
+              {% endif %}
+              <div>
+                <strong>{{ metric_value }}</strong>
+                <span>{{ metric.label }}</span>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
       </section>
     {% elsif page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
@@ -148,3 +154,6 @@ layout: default
     {% endif %}
   </article>
 </div>
+{% if page.research_visuals %}
+  <script defer src="{{ '/assets/js/home-research.js' | relative_url | bust_file_cache }}"></script>
+{% endif %}
