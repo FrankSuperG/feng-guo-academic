@@ -1,0 +1,26 @@
+<dl class="academic-metrics" aria-label="Research metrics">
+  <div>
+    <dt>Published & accepted papers</dt>
+    <dd>
+      <strong>{{ site.data.publication_metrics.published_accepted }}</strong>
+    </dd>
+  </div>
+  <div>
+    <dt>Google Scholar citations</dt>
+    <dd>
+      <strong>{{ site.data.citations.profile.citations | default: 459 }}</strong>
+    </dd>
+  </div>
+  <div>
+    <dt>h-index</dt>
+    <dd>
+      <strong>{{ site.data.citations.profile.h_index | default: 12 }}</strong>
+    </dd>
+  </div>
+  <div>
+    <dt>Preprints</dt>
+    <dd>
+      <strong>{{ site.data.publication_metrics.preprints }}</strong>
+    </dd>
+  </div>
+</dl>

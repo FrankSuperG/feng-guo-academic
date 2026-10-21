@@ -8,11 +8,31 @@ layout: default
   </style>
 {% endif %}
 
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-description">{{ page.description }}</p>
-  </header>
+<div class="post{% if page.academic_style %} academic-document academic-document--{{ page.section_key }}{% endif %}">
+  {% if page.academic_style %}
+    <header class="academic-page-header">
+      <div class="academic-page-header__inner">
+        <div>
+          <p class="academic-page-header__name">
+            {{ site.first_name }}
+            {{ site.last_name }}
+          </p>
+          <h1>{{ page.title }}</h1>
+          <p class="academic-page-header__intro">{{ page.page_intro }}</p>
+        </div>
+        {% if page.section_key == 'cv' %}
+          <button type="button" class="academic-print" onclick="window.print()" title="Print CV" aria-label="Print CV">
+            <i class="fa-solid fa-print" aria-hidden="true"></i>
+          </button>
+        {% endif %}
+      </div>
+    </header>
+  {% else %}
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="post-description">{{ page.description }}</p>
+    </header>
+  {% endif %}
 
   <article>
     {{ content }}

@@ -7,81 +7,40 @@ nav_order: 3
 description: Curriculum vitae of Feng Guo, FWO Senior Postdoctoral Fellow, including academic appointments, education, publications, battery modelling projects, awards, conference talks, open-source software, and scholarly service.
 keywords: Feng Guo CV, Feng Guo curriculum vitae, FWO Senior Postdoctoral Fellow, VITO, UHasselt, electrochemical battery modelling, battery state estimation, CPG-SPMT, Electrochemical Battery Model Atlas, conference talks, scholarly service
 last_modified_at: 2026-10-21
-_styles: |
-  .post .post-title {
-    letter-spacing: 0;
-    margin-bottom: 0.4rem;
-  }
-  .post .post-description {
-    color: var(--global-text-color-light);
-    margin-bottom: 1.1rem;
-  }
-  .post article h2 {
-    margin-top: 1.8rem;
-    margin-bottom: 0.8rem;
-    padding-bottom: 0.35rem;
-    border-bottom: 1px solid var(--global-divider-color);
-    font-size: 1.35rem;
-    display: flex;
-    align-items: center;
-    gap: 0.45rem;
-  }
-  .post article h2 i {
-    color: var(--global-theme-color);
-    font-size: 0.95em;
-    width: 1.15em;
-    text-align: center;
-  }
-  .post article ul {
-    margin-bottom: 0.9rem;
-  }
-  .post article ul li {
-    margin-bottom: 0.35rem;
-    line-height: 1.6;
-  }
-  .post article p {
-    line-height: 1.7;
-  }
-  .cv-quick-stats {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.45rem;
-    margin: 0.4rem 0 1.2rem;
-  }
-  .cv-quick-stats span {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    border: 1px solid var(--global-divider-color);
-    border-radius: 999px;
-    padding: 0.22rem 0.72rem;
-    font-size: 0.82rem;
-    color: var(--global-text-color-light);
-    background: var(--global-card-bg-color);
-  }
-  .cv-quick-stats i {
-    color: var(--global-theme-color);
-  }
-  @media (max-width: 768px) {
-    .post .post-title { font-size: 2rem; }
-    .post article h2 {
-      font-size: 1.15rem;
-      gap: 0.35rem;
-    }
-    .post article ul li { margin-bottom: 0.28rem; }
-    .cv-quick-stats { gap: 0.35rem; }
-    .cv-quick-stats span { font-size: 0.75rem; padding: 0.2rem 0.62rem; }
-  }
+academic_style: true
+section_key: cv
+page_intro: Academic appointments, research, and scholarly contributions.
+footer_fixed: false
+cv_sections:
+  - id: academic--industry-appointments
+    label: Appointments
+  - id: education
+    label: Education
+  - id: publications-overview
+    label: Publications
+  - id: research-projects-pi
+    label: Research projects
+  - id: awards--honors
+    label: Awards & honors
+  - id: conferences--symposia-selected
+    label: Conferences
+  - id: open-source--community
+    label: Open research
+  - id: scholarly-service
+    label: Scholarly service
 ---
 
-<div class="cv-quick-stats">
-  <span><i class="fa-solid fa-book-open"></i> {{ site.data.publication_metrics.published_accepted }} published/accepted papers</span>
-  <span><i class="fa-solid fa-link"></i> {{ site.data.publication_metrics.preprints }} preprints</span>
-  <span><i class="fa-solid fa-quote-right"></i> {{ site.data.citations.profile.citations | default: 459 }} citations</span>
-  <span><i class="fa-solid fa-chart-line"></i> h-index {{ site.data.citations.profile.h_index | default: 12 }}</span>
-</div>
+{% include research-metrics.liquid %}
 
-## <i class="fa-solid fa-briefcase"></i> Academic & Industry Appointments
+<div class="cv-layout" markdown="1">
+<nav class="cv-section-nav" aria-label="CV sections">
+  {% for section in page.cv_sections %}
+    <a href="#{{ section.id }}">{{ section.label }}</a>
+  {% endfor %}
+</nav>
+<div class="cv-content" markdown="1">
+
+<h2 id="academic--industry-appointments"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Academic &amp; Industry Appointments</h2>
 
 - **Visiting Researcher**, Warwick Manufacturing Group (WMG), University of Warwick, United Kingdom (Sep. 2026–Present)<br>
   Collaborating professor: Prof. James Marco
@@ -89,7 +48,7 @@ _styles: |
 - **Postdoctoral Researcher**, Flemish Institute for Technological Research (VITO), Belgium (Dec. 2022–Sep. 2025)
 - **Researcher**, EnergyVille, Belgium (Dec. 2022–Sep. 2025)
 
-## <i class="fa-solid fa-graduation-cap"></i> Education
+<h2 id="education"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Education</h2>
 
 - **Ph.D., Automotive Engineering**, Southwest Jiaotong University (Sep. 2015–Jul. 2020)<br>
   Thesis: _Advanced Battery State Estimation Techniques for Electric Vehicle Battery Management Systems_<br>
@@ -98,14 +57,14 @@ _styles: |
 - **B.Sc., Mechanical Engineering**, Southwest Jiaotong University (Sep. 2011–Jul. 2015)<br>
   Top 5% · Thesis: _State of Charge Estimation for Batteries Using Extended Kalman Filter_
 
-## <i class="fa-solid fa-book-open"></i> Publications Overview
+<h2 id="publications-overview"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Publications Overview</h2>
 
 - **{{ site.data.publication_metrics.published_accepted }}** published or accepted peer-reviewed papers
 - **{{ site.data.publication_metrics.preprints }}** preprints with arXiv or SSRN links
 
 For full details with DOI/preprint links, JCR quartiles, and impact factors, see the [Publications page](/feng-guo-academic/publications/).
 
-## <i class="fa-solid fa-flask"></i> Research Projects (PI)
+<h2 id="research-projects-pi"><i class="fa-solid fa-flask" aria-hidden="true"></i> Research Projects (PI)</h2>
 
 - **FWO Senior Postdoctoral Fellowship, Belgium** (2025–present)<br>
   Research on battery fault mechanism and fault-tolerant control based on electrochemical models in cloud BMS.
@@ -113,7 +72,7 @@ For full details with DOI/preprint links, JCR quartiles, and impact factors, see
 - **Sichuan Provincial “Miaozi” Project, China** (2016–2018)<br>
   Development of hybrid power systems for new energy vehicles (Grant No. 2016RZ0043).
 
-## <i class="fa-solid fa-trophy"></i> Awards & Honors
+<h2 id="awards--honors"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Awards &amp; Honors</h2>
 
 - FWO Senior Postdoctoral Fellowship (2025)
 - IEEE Senior Member (2025)
@@ -124,7 +83,7 @@ For full details with DOI/preprint links, JCR quartiles, and impact factors, see
 - Outstanding Graduate (Undergraduate), Southwest Jiaotong University (2015)
 - First Prize, National Undergraduate Mathematical Modeling Competition (Sichuan Division, 2014)
 
-## <i class="fa-solid fa-users"></i> Conferences & Symposia (selected)
+<h2 id="conferences--symposia-selected"><i class="fa-solid fa-users" aria-hidden="true"></i> Conferences &amp; Symposia (selected)</h2>
 
 - **The 9th International Conference on Energy Storage and Intelligent Vehicles (ICEIV 2026)**, Macau, China (2026)<br>
   Role: Session Co-Chair, _Energy Storage and Integrated Energy Systems I_ · Topic: _Snapshot-Based Aging Interpretation of Field-Aged Graphite/NMC Cells Using a Grouped Electrochemical Model_
@@ -143,12 +102,15 @@ For full details with DOI/preprint links, JCR quartiles, and impact factors, see
 - Symposium on Physics and Machine Learning for Batteries, Aachen, Germany (2025)
 - OMES Symposium, Genk, Belgium (2025)
 
-## <i class="fa-solid fa-code-branch"></i> Open-Source & Community
+<h2 id="open-source--community"><i class="fa-solid fa-code-branch" aria-hidden="true"></i> Open-Source &amp; Community</h2>
 
 Open-source contributions include [CPG-SPMT on GitHub](https://github.com/FrankSuperG/CPG-SPMT), a control-oriented parameter-grouped single-particle model with thermal effects, and [Electrochemical Battery Model Atlas](https://github.com/FrankSuperG/electrochemical-battery-model-atlas), a curated reproducibility guide for public electrochemical battery model repositories.
 
 Open datasets include [RoboBATT: Multirate Robot Battery and Actuator Telemetry Traces](https://zenodo.org/records/21853137), co-authored with Hongxing Liu. RoboBATT links battery-management-system measurements from two parallel lithium iron phosphate battery packs with joint-drive and chassis telemetry from an AGIBOT G2 Pro mobile dual-arm robot. The dataset includes aligned 10 Hz tables, field dictionaries, validation records, and analysis code, released under CC BY 4.0. DOI: [10.5281/zenodo.21853137](https://doi.org/10.5281/zenodo.21853137).
 
-## <i class="fa-solid fa-pen-nib"></i> Scholarly Service
+<h2 id="scholarly-service"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i> Scholarly Service</h2>
 
 Reviewer for leading journals including: _Renewable & Sustainable Energy Reviews, Energy, Journal of Energy Storage, Battery Energy, Renewable Energy, Journal of Electroanalytical Chemistry, Electrical Engineering, World Electric Vehicle Journal, Electronics, Batteries, The Journal of Supercomputing,_ and _Complex & Intelligent Systems_.
+
+</div>
+</div>

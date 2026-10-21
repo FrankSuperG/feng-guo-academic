@@ -2,24 +2,20 @@
 layout: page
 permalink: /repositories/
 title: Repositories
+academic_style: true
+section_key: repositories
+page_intro: Open-source models, reproducibility resources, and battery datasets.
+footer_fixed: false
 description: Open-source software and datasets by Feng Guo, including the RoboBATT robot battery telemetry dataset, CPG-SPMT, and the Electrochemical Battery Model Atlas for reproducible battery modelling and BMS research.
 keywords: Feng Guo datasets, RoboBATT, robot battery telemetry dataset, AGIBOT G2 Pro, lithium iron phosphate battery data, BMS telemetry, robot actuator telemetry, Zenodo dataset, CPG-SPMT, Electrochemical Battery Model Atlas, battery model reproducibility, open-source BMS tools
-last_modified_at: 2026-08-18
+last_modified_at: 2026-10-21
 nav: true
 nav_order: 4
 ---
 
-<section class="repo-intro">
-  <p class="pub-kicker">Open Research</p>
-  <h2>Datasets and tools for reproducible battery research</h2>
-  <p>
-    My open research work combines reusable battery datasets, control-oriented models, and reproducibility resources for battery management systems and electrochemical modelling.
-  </p>
-</section>
-
 <div class="repo-showcase">
   <article class="repo-card">
-    <img src="https://raw.githubusercontent.com/FrankSuperG/CPG-SPMT/main/cpg_spmt_logo.png" alt="CPG-SPMT logo" />
+    {% include figure.liquid path="assets/img/cpg-spmt-logo.png" width="240" height="180" sizes="(max-width: 700px) 280px, 240px" alt="CPG-SPMT logo" loading="lazy" %}
     <div>
       <p class="repo-eyebrow">Control-oriented model implementation</p>
       <h2>CPG-SPMT</h2>
@@ -33,13 +29,14 @@ nav_order: 4
       </ul>
       <a href="https://github.com/FrankSuperG/CPG-SPMT" class="repo-link" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-github"></i>
-        <span>FrankSuperG/CPG-SPMT</span>
+        <span>View repository</span>
+        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
       </a>
     </div>
   </article>
 
   <article class="repo-card">
-    <img src="https://raw.githubusercontent.com/FrankSuperG/electrochemical-battery-model-atlas/main/assets/logo.png" alt="Electrochemical Battery Model Atlas logo" />
+    {% include figure.liquid path="assets/img/battery-model-atlas-logo.png" width="240" height="180" sizes="(max-width: 700px) 280px, 240px" alt="Electrochemical Battery Model Atlas logo" loading="lazy" %}
     <div>
       <p class="repo-eyebrow">Reproducibility atlas</p>
       <h2>Electrochemical Battery Model Atlas</h2>
@@ -53,13 +50,14 @@ nav_order: 4
       </ul>
       <a href="https://github.com/FrankSuperG/electrochemical-battery-model-atlas" class="repo-link" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-github"></i>
-        <span>FrankSuperG/electrochemical-battery-model-atlas</span>
+        <span>View repository</span>
+        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
       </a>
     </div>
   </article>
 
   <article class="repo-card repo-card--featured" itemscope itemtype="https://schema.org/Dataset">
-    <img src="{{ '/assets/img/robobatt-dataset.jpg' | relative_url }}" alt="RoboBATT robot battery and actuator telemetry dataset icon" />
+    {% include figure.liquid path="assets/img/robobatt-dataset.jpg" class="repo-dataset-icon" width="180" height="180" sizes="180px" alt="RoboBATT robot battery and actuator telemetry dataset icon" loading="lazy" %}
     <div>
       <p class="repo-eyebrow">Open robot battery dataset · Zenodo</p>
       <h2 itemprop="name">RoboBATT: Multirate Robot Battery and Actuator Telemetry Traces</h2>

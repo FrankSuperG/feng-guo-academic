@@ -1,4 +1,5 @@
-body.academic-home-page {
+body.academic-home-page,
+body.academic-page {
   --global-theme-color: #117568;
   --global-hover-color: #117568;
 
@@ -21,7 +22,8 @@ body.academic-home-page {
   }
 }
 
-html[data-theme="dark"] body.academic-home-page {
+html[data-theme="dark"] body.academic-home-page,
+html[data-theme="dark"] body.academic-page {
   --global-theme-color: #80dfcd;
   --global-hover-color: #80dfcd;
 }

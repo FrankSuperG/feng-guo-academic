@@ -16,7 +16,7 @@
   </head>
 
   <!-- Body -->
-  <body class="{% if page.hero %}academic-home-page {% endif %}{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% if site.footer_fixed == false or page.footer_fixed == false %}sticky-bottom-footer{% endif %}">
+  <body class="{% if page.hero %}academic-home-page {% elsif page.academic_style %}academic-page {% endif %}{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% if site.footer_fixed == false or page.footer_fixed == false %}sticky-bottom-footer{% endif %}">
     <!-- Header -->
     {% include header.liquid %}
 

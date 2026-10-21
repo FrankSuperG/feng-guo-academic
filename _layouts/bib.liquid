@@ -258,7 +258,7 @@
         {% elsif entry.pubstate == 'accepted' %}
           Accepted
         {% elsif entry.pubstate == 'preprint' %}
-          arXiv Preprint
+          Preprint
         {% elsif entry.pubstate == 'presentation' %}
           Conference Talk / Report
         {% elsif entry.pubstate == 'under_review' %}
@@ -277,25 +277,31 @@
         </a>
       {% endif %}
       {% if entry.abstract %}
-        <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+        <a class="abstract btn btn-sm z-depth-0" role="button"> <i class="fa-regular fa-file-lines" aria-hidden="true"></i> Abstract </a>
       {% endif %}
       {% if entry.doi %}
-        <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
+        <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button"
+          ><i class="fa-solid fa-link" aria-hidden="true"></i> DOI</a
+        >
       {% endif %}
       {% if entry.ieee %}
-        <a href="{{ entry.ieee }}" class="btn btn-sm z-depth-0" role="button">IEEE Xplore</a>
+        <a href="{{ entry.ieee }}" class="btn btn-sm z-depth-0" role="button"
+          ><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> IEEE Xplore</a
+        >
       {% endif %}
       {% if entry.arxiv %}
-        <a href="https://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
+        <a href="https://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button"
+          ><i class="ai ai-arxiv" aria-hidden="true"></i> arXiv</a
+        >
       {% endif %}
       {% if entry.ssrn %}
-        <a href="{{ entry.ssrn }}" class="btn btn-sm z-depth-0" role="button">SSRN</a>
+        <a href="{{ entry.ssrn }}" class="btn btn-sm z-depth-0" role="button"><i class="fa-regular fa-file-lines" aria-hidden="true"></i> SSRN</a>
       {% endif %}
       {% if entry.hal %}
         <a href="https://hal.science/{{ entry.hal }}" class="btn btn-sm z-depth-0" role="button">HAL</a>
       {% endif %}
       {% if entry.bibtex_show %}
-        <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+        <a class="bibtex btn btn-sm z-depth-0" role="button"> <i class="fa-solid fa-code" aria-hidden="true"></i> BibTeX </a>
       {% endif %}
       {% if entry.html %}
         {% if entry.html contains '://' %}
@@ -400,7 +406,8 @@
           {% if site.enable_publication_badges.google_scholar and entry_has_google_scholar_badge %}
             <a
               href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.data.socials.scholar_userid }}&citation_for_view={{ site.data.socials.scholar_userid }}:{{ entry.google_scholar_id }}"
-              aria-label="Google Scholar link"
+              class="scholar-citation"
+              aria-label="Google Scholar citations"
               role="button"
             >
               {% assign citation_count = 0 %}
@@ -421,10 +428,8 @@
                 {% endfor %}
               {% endif %}
 
-              <img
-                src="https://img.shields.io/badge/scholar-{{ citation_count }}-4285F4?logo=googlescholar&labelColor=beige"
-                alt="{{ citation_count }} Google Scholar citations"
-              >
+              <i class="ai ai-google-scholar-square" aria-hidden="true"></i>
+              <span>{{ citation_count }} citations</span>
             </a>
           {% endif %}
           {% if site.enable_publication_badges.inspirehep and entry_has_inspirehep_badge %}
