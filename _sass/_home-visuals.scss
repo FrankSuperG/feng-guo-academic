@@ -226,6 +226,9 @@
   }
 
   .research-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
+
     article {
       scroll-margin-top: 90px;
     }
@@ -241,6 +244,11 @@
     p {
       color: var(--home-muted);
       opacity: 1;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      line-height: 1.4;
     }
   }
 
@@ -366,6 +374,12 @@ html[data-theme="dark"] .academic-home {
       --stage-accent: #c6b1e1;
       --stage-tint: #322c3e;
     }
+  }
+}
+
+@media (max-width: 900px) {
+  .academic-home .research-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -501,6 +515,12 @@ html[data-theme="dark"] .academic-home {
         line-height: 1.4;
       }
     }
+  }
+}
+
+@media (max-width: 575px) {
+  .academic-home .research-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 

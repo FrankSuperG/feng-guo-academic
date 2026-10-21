@@ -52,6 +52,32 @@ hero:
       url: https://www.linkedin.com/in/feng-guo-a3187a259/
       icon: fa-brands fa-linkedin
 
+research_interests:
+  - id: research-modelling
+    key: model
+    step: MODEL
+    diagram_label: Electrochemical modelling
+    title: Control-oriented electrochemical battery modelling
+    description: SPM/P2D model reduction, grouped electrochemical parameters, thermal coupling, and fast parameter identification with BOLT.
+  - id: research-estimation
+    key: estimate
+    step: ESTIMATE
+    diagram_label: State & parameter estimation
+    title: Battery state estimation and parameter identification
+    description: Robust SOC estimation, physics-guided Kalman filtering, observer design, and joint state-parameter estimation under uncertainty.
+  - id: research-safety
+    key: safety
+    step: PROTECT
+    diagram_label: Safety & fault tolerance
+    title: Battery safety, fault diagnosis, and fault-tolerant control
+    description: Sensor-fault diagnosis and fault-tolerant SOC estimation for reliable battery operation, extending towards interpretable ageing diagnostics and safety- and lifetime-aware control.
+  - id: research-learning
+    key: learning
+    step: LEARN
+    diagram_label: Physics-guided intelligence
+    title: Physics-guided AI for battery management systems
+    description: Hybrid physics-learning models that preserve interpretability while improving robustness under real operating conditions.
+
 profile:
   align: right
   image: prof_pic.jpg
@@ -83,26 +109,13 @@ latest_posts:
   <h2>Research Interests</h2>
   {% include research-framework.liquid %}
   <div class="research-grid">
-    <article id="research-modelling">
-      <span class="research-index">01 / MODELS</span>
-      <h3>Control-oriented electrochemical battery modelling</h3>
-      <p>SPM/P2D model reduction, grouped electrochemical parameters, thermal coupling, and fast parameter identification with BOLT.</p>
-    </article>
-    <article id="research-estimation">
-      <span class="research-index">02 / ESTIMATION</span>
-      <h3>Battery state estimation and parameter identification</h3>
-      <p>Robust SOC estimation, physics-guided Kalman filtering, observer design, and joint state-parameter estimation under uncertainty.</p>
-    </article>
-    <article id="research-safety">
-      <span class="research-index">03 / SAFETY</span>
-      <h3>Battery safety, fault diagnosis, and fault-tolerant control</h3>
-      <p>Sensor-fault diagnosis and fault-tolerant SOC estimation for reliable battery operation, extending towards interpretable ageing diagnostics and safety- and lifetime-aware control.</p>
-    </article>
-    <article id="research-learning">
-      <span class="research-index">04 / LEARNING</span>
-      <h3>Physics-guided AI for battery management systems</h3>
-      <p>Hybrid physics-learning models that preserve interpretability while improving robustness under real operating conditions.</p>
-    </article>
+    {% for interest in page.research_interests %}
+      <article id="{{ interest.id }}">
+        <span class="research-index">0{{ forloop.index }} · {{ interest.step }}</span>
+        <h3>{{ interest.title }}</h3>
+        <p>{{ interest.description }}</p>
+      </article>
+    {% endfor %}
   </div>
 </section>
 

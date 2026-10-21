@@ -1,69 +1,17 @@
-<!-- Lucide icons: ISC/MIT licences in assets/icons/lucide-LICENSE.txt. -->
-<figure class="research-framework" aria-labelledby="framework-caption">
+<div class="research-framework" aria-label="Four connected research directions">
   <ol class="research-framework__flow">
-    <li>
-      <a href="#research-modelling" class="framework-stage framework-stage--model">
-        <span class="framework-step">01 <span>MODEL</span></span>
-        <span class="framework-symbol" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <path d="m11 7-3 5h4l-3 5"/><path d="M14.856 6H16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.935"/><path d="M22 14v-4"/><path d="M5.14 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2.936"/>
-          </svg>
-        </span>
-        <strong
-          >Electrochemical<br>
-          modelling</strong
-        >
-        <small>SPM / P2D · thermal effects</small>
-      </a>
-      <i class="fa-solid fa-chevron-right framework-connector" aria-hidden="true"></i>
-    </li>
-    <li>
-      <a href="#research-estimation" class="framework-stage framework-stage--estimate">
-        <span class="framework-step">02 <span>ESTIMATE</span></span>
-        <span class="framework-symbol" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10"/><path d="M22 12h-4M6 12H2M12 6V2M12 22v-4"/>
-          </svg>
-        </span>
-        <strong
-          >State & parameter<br>
-          estimation</strong
-        >
-        <small>SOC · observers · identification</small>
-      </a>
-      <i class="fa-solid fa-chevron-right framework-connector" aria-hidden="true"></i>
-    </li>
-    <li>
-      <a href="#research-safety" class="framework-stage framework-stage--safety">
-        <span class="framework-step">03 <span>PROTECT</span></span>
-        <span class="framework-symbol" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>
-          </svg>
-        </span>
-        <strong
-          >Safety &<br>
-          fault tolerance</strong
-        >
-        <small>Diagnosis · reliable control</small>
-      </a>
-      <i class="fa-solid fa-chevron-right framework-connector" aria-hidden="true"></i>
-    </li>
-    <li>
-      <a href="#research-learning" class="framework-stage framework-stage--learning">
-        <span class="framework-step">04 <span>LEARN</span></span>
-        <span class="framework-symbol" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <path d="M12 13h4M12 18h6a2 2 0 012 2v1M12 8h8M12 9a4.17 4.17 0 01-3 4M16 8V5a2 2 0 012-2M6 18a4 4 0 01-2-7.465M6.004 5.125a4 4 0 00-2.526 5.77M6.294 6.294A3 3 0 1112 5v13a4 4 0 11-7.967-.518"/><g fill="currentColor"><circle cx="16" cy="13" r="0.5"/><circle cx="18" cy="3" r="0.5"/><circle cx="20" cy="21" r="0.5"/><circle cx="20" cy="8" r="0.5"/></g>
-          </svg>
-        </span>
-        <strong
-          >Physics-guided<br>
-          intelligence</strong
-        >
-        <small>Hybrid learning · battery management</small>
-      </a>
-    </li>
+    {% for interest in page.research_interests %}
+      <li>
+        <a href="#{{ interest.id }}" class="framework-stage framework-stage--{{ interest.key }}">
+          <span class="framework-step"
+            >0{{ forloop.index }}
+            <span>{{ interest.step }}</span></span
+          >
+          <span class="framework-symbol" aria-hidden="true">{% include research-icon.liquid icon=interest.key %}</span>
+          <strong>{{ interest.diagram_label }}</strong>
+        </a>
+        {% unless forloop.last %}<i class="fa-solid fa-chevron-right framework-connector" aria-hidden="true"></i>{% endunless %}
+      </li>
+    {% endfor %}
   </ol>
-  <figcaption id="framework-caption">Electrochemical models connect state estimation, battery safety, and physics-guided learning.</figcaption>
-</figure>
+</div>
