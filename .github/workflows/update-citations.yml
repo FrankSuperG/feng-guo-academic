@@ -116,14 +116,14 @@ jobs:
           )
 
       - name: Set up Ruby for site rebuild
-        if: steps.citation_changes.outputs.changed == 'true'
+        if: steps.citation_changes.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3.5"
+          ruby-version: "3.3"
           bundler-cache: true
 
       - name: Update _config.yml for deployment
-        if: steps.citation_changes.outputs.changed == 'true'
+        if: steps.citation_changes.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         uses: fjogeleit/yaml-update-action@main
         with:
           commitChange: false
@@ -132,7 +132,7 @@ jobs:
           value: ${{ github.repository }}
 
       - name: Build site with updated citations
-        if: steps.citation_changes.outputs.changed == 'true'
+        if: steps.citation_changes.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade nbconvert
@@ -140,13 +140,13 @@ jobs:
           bundle exec jekyll build
 
       - name: Purge unused CSS
-        if: steps.citation_changes.outputs.changed == 'true'
+        if: steps.citation_changes.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
 
       - name: Deploy site with updated citations
-        if: steps.citation_changes.outputs.changed == 'true'
+        if: steps.citation_changes.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
