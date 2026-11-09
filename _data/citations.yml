@@ -1,9 +1,9 @@
 metadata:
-  last_updated: '2026-11-02'
+  last_updated: '2026-11-09'
   source: Google Scholar via SerpApi (z2SHUxkAAAAJ)
 profile:
-  citations: 553
-  citations_since_2021: 483
+  citations: 557
+  citations_since_2021: 487
   h_index: 12
   h_index_since_2021: 11
   i10_index: 12
@@ -16,11 +16,11 @@ papers:
   z2SHUxkAAAAJ:eQOLeE2rZwMC:
     title: A Systematic Review of Electrochemical Model-based Lithium-ion Battery State Estimation in Battery Management Systems
     year: '2024'
-    citations: 97
+    citations: 99
   z2SHUxkAAAAJ:2osOgNQ5qMEC:
     title: Lithium-ion battery online rapid state-of-power estimation under multiple constraints
     year: '2018'
-    citations: 51
+    citations: 52
   z2SHUxkAAAAJ:W7OEmFMy1HYC:
     title: State of charge estimation in electric vehicles at various ambient temperatures
     year: '2020'
@@ -65,6 +65,10 @@ papers:
     title: 'Optimizing parameter estimation for electrochemical battery model: A comparative analysis of operating profiles on computational efficiency and accuracy'
     year: '2026'
     citations: 6
+  z2SHUxkAAAAJ:KlAtU1dfN6UC:
+    title: Residual Bias Compensation Filter for Physics-Based SOC Estimation in Lithium Iron Phosphate Batteries
+    year: '2025'
+    citations: 6
   z2SHUxkAAAAJ:YsMSGLbcyi4C:
     title: 'Efficiency and Optimality in Electrochemical Battery Model Parameter Identification: A Comparative Study of Estimation Techniques'
     year: '2024'
@@ -76,10 +80,6 @@ papers:
   z2SHUxkAAAAJ:4DMP91E08xMC:
     title: Physics-guided residual Kalman learning for state-of-charge estimation of lithium iron phosphate batteries
     year: '2026'
-    citations: 5
-  z2SHUxkAAAAJ:KlAtU1dfN6UC:
-    title: Residual Bias Compensation Filter for Physics-Based SOC Estimation in Lithium Iron Phosphate Batteries
-    year: '2025'
     citations: 5
   z2SHUxkAAAAJ:3fE2CSJIrl8C:
     title: Experiment of DPF Temperature Control During Thermal Regeneration
