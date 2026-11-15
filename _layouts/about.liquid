@@ -60,7 +60,16 @@ layout: default
               {% if page.hero.links %}
                 <div class="academic-hero__links" aria-label="Profile links">
                   {% for link in page.hero.links %}
-                    <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" title="{{ link.label }}" aria-label="{{ link.label }}">
+                    <a
+                      href="{{ link.url }}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="{{ link.label }}"
+                      aria-label="{{ link.label }}"
+                      {% if link.keep_label %}
+                        class="academic-hero__link--labelled"
+                      {% endif %}
+                    >
                       {% if link.icon %}<i class="{{ link.icon }}"></i>{% endif %}
                       <span>{{ link.label }}</span>
                     </a>

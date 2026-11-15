@@ -42,6 +42,14 @@ hero:
     - label: ORCID
       url: https://orcid.org/0000-0002-5141-8672
       icon: ai ai-orcid-square ai-1x
+    - label: VITO
+      url: https://vito.be/en/about-vito/employees/feng-guo
+      icon: fa-solid fa-building
+      keep_label: true
+    - label: UHasselt
+      url: https://www.uhasselt.be/en/who-is-who/feng-guo
+      icon: fa-solid fa-graduation-cap
+      keep_label: true
     - label: GitHub
       url: https://github.com/FrankSuperG
       icon: fa-brands fa-github

@@ -745,7 +745,7 @@ html[data-theme="dark"] .academic-home {
       line-height: 1.5;
     }
 
-    .academic-hero__links a {
+    .academic-hero__links a:not(.academic-hero__link--labelled) {
       width: 30px;
       justify-content: center;
 
