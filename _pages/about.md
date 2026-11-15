@@ -3,7 +3,7 @@ layout: about
 title: About
 description: Feng Guo researches Physics-Informed Battery Intelligence at VITO and UHasselt, connecting electrochemical modelling, fast parameter identification, robust state estimation, and sensor-fault tolerance for reliable battery management.
 keywords: Feng Guo, Physics-Informed Battery Intelligence, FWO Senior Postdoctoral Fellow, VITO, UHasselt, electrochemical battery modelling, robust battery state estimation, parameter identification, SOC estimation, lithium iron phosphate batteries, battery safety, sensor fault diagnosis, fault-tolerant control, physics-guided AI, battery management systems
-last_modified_at: 2026-10-21
+last_modified_at: 2026-11-15
 permalink: /
 subtitle: FWO Senior Postdoctoral Fellow · Joint Postdoc at VITO & UHasselt (Belgium)
 footer_fixed: false
@@ -128,17 +128,24 @@ latest_posts:
   </div>
   <div class="home-resource-grid">
     <a class="home-resource" href="https://github.com/FrankSuperG/CPG-SPMT" target="_blank" rel="noopener noreferrer">
-      {% include figure.liquid path="assets/img/cpg-spmt-logo.png" width="280" height="160" sizes="(max-width: 700px) 280px, 320px" alt="CPG-SPMT logo" loading="lazy" %}
+      {% include figure.liquid path="assets/img/cpg-spmt-logo.png" width="280" height="160" sizes="(max-width: 900px) 420px, 250px" alt="CPG-SPMT logo" loading="lazy" %}
       <span class="home-resource-type">Open-source model</span>
       <h3>CPG-SPMT</h3>
       <p>Control-oriented, parameter-grouped electrochemical modelling with thermal effects.</p>
       <span class="home-resource-destination"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
     </a>
     <a class="home-resource" href="https://github.com/FrankSuperG/electrochemical-battery-model-atlas" target="_blank" rel="noopener noreferrer">
-      {% include figure.liquid path="assets/img/battery-model-atlas-logo.png" width="280" height="160" sizes="(max-width: 700px) 280px, 320px" alt="Electrochemical Battery Model Atlas logo" loading="lazy" %}
+      {% include figure.liquid path="assets/img/battery-model-atlas-logo.png" width="280" height="160" sizes="(max-width: 900px) 420px, 250px" alt="Electrochemical Battery Model Atlas logo" loading="lazy" %}
       <span class="home-resource-type">Reproducibility guide</span>
       <h3>Battery Model Atlas</h3>
       <p>A curated guide to public electrochemical battery models and reproducible workflows.</p>
+      <span class="home-resource-destination"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+    </a>
+    <a class="home-resource" href="https://github.com/FrankSuperG/electrochemical-battery-parameters" target="_blank" rel="noopener noreferrer">
+      {% include figure.liquid path="assets/img/ebatp-logo.png" width="280" height="160" sizes="(max-width: 900px) 420px, 250px" alt="" loading="lazy" %}
+      <span class="home-resource-type">Open parameter library</span>
+      <h3>E-BatP</h3>
+      <p>Traceable electrode OCP curves, diffusion, and kinetics for DFN/P2D, SPM, and SPMe models.</p>
       <span class="home-resource-destination"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
     </a>
     <a class="home-resource" href="https://zenodo.org/records/21853137" target="_blank" rel="noopener noreferrer">

@@ -6,9 +6,9 @@ academic_style: true
 section_key: repositories
 page_intro: Open-source models, reproducibility resources, and battery datasets.
 footer_fixed: false
-description: Open-source software and datasets by Feng Guo, including the RoboBATT robot battery telemetry dataset, CPG-SPMT, and the Electrochemical Battery Model Atlas for reproducible battery modelling and BMS research.
-keywords: Feng Guo datasets, RoboBATT, robot battery telemetry dataset, AGIBOT G2 Pro, lithium iron phosphate battery data, BMS telemetry, robot actuator telemetry, Zenodo dataset, CPG-SPMT, Electrochemical Battery Model Atlas, battery model reproducibility, open-source BMS tools
-last_modified_at: 2026-10-21
+description: Open-source resources by Feng Guo for reproducible battery modelling and BMS research, including CPG-SPMT, the Electrochemical Battery Model Atlas, the E-BatP parameter library, and the RoboBATT telemetry dataset.
+keywords: Feng Guo datasets, RoboBATT, robot battery telemetry dataset, AGIBOT G2 Pro, lithium iron phosphate battery data, BMS telemetry, robot actuator telemetry, Zenodo dataset, CPG-SPMT, Electrochemical Battery Model Atlas, E-BatP, electrochemical battery parameters, battery model reproducibility, open-source BMS tools
+last_modified_at: 2026-11-15
 nav: true
 nav_order: 4
 ---
@@ -50,6 +50,27 @@ nav_order: 4
       </ul>
       <a href="https://github.com/FrankSuperG/electrochemical-battery-model-atlas" class="repo-link" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-github"></i>
+        <span>View repository</span>
+        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+  <article class="repo-card" id="e-batp">
+    {% include figure.liquid path="assets/img/ebatp-logo.png" width="240" height="180" sizes="(max-width: 700px) 280px, 240px" alt="" loading="lazy" %}
+    <div>
+      <p class="repo-eyebrow">Open electrochemical parameter library</p>
+      <h2>E-BatP: Electrochemical Battery Parameters</h2>
+      <p>
+        A library of traceable lithium-ion battery parameters for DFN/P2D, SPM, and SPMe models, with links to the cells and experiments behind each record.
+      </p>
+      <ul>
+        <li>Electrode open-circuit potential (OCP) curves, solid-state diffusion, and reaction kinetics</li>
+        <li>Material and cell indexes with parameter definitions, test conditions, and cell-matching evidence</li>
+        <li>Supporting full-cell test links and source-specific data licenses</li>
+      </ul>
+      <a href="https://github.com/FrankSuperG/electrochemical-battery-parameters" class="repo-link" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github" aria-hidden="true"></i>
         <span>View repository</span>
         <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
       </a>
