@@ -1,9 +1,9 @@
 metadata:
-  last_updated: '2026-11-09'
+  last_updated: '2026-11-16'
   source: Google Scholar via SerpApi (z2SHUxkAAAAJ)
 profile:
-  citations: 557
-  citations_since_2021: 487
+  citations: 561
+  citations_since_2021: 491
   h_index: 12
   h_index_since_2021: 11
   i10_index: 12
@@ -16,7 +16,7 @@ papers:
   z2SHUxkAAAAJ:eQOLeE2rZwMC:
     title: A Systematic Review of Electrochemical Model-based Lithium-ion Battery State Estimation in Battery Management Systems
     year: '2024'
-    citations: 99
+    citations: 102
   z2SHUxkAAAAJ:2osOgNQ5qMEC:
     title: Lithium-ion battery online rapid state-of-power estimation under multiple constraints
     year: '2018'
@@ -88,7 +88,7 @@ papers:
   z2SHUxkAAAAJ:MXK_kJrjxJIC:
     title: A model-based research on exhaust temperature control for dpf active regeneration
     year: '2019'
-    citations: 4
+    citations: 5
   z2SHUxkAAAAJ:QIV2ME_5wuYC:
     title: 'Rapid and robust parameter estimation for electrochemical battery models via BOLT: A batch-optimized local-to-global technique'
     year: '2026'
